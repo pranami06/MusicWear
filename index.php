@@ -5,59 +5,15 @@
  * Date: 12/6/2017
  * Time: 4:57 PM
  */
+require_once ("commonScripts.php");
 ?>
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="">
-<!--<![endif]-->
 
-<head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="author" content="webthemez.com">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MusicWear - Listen music in Style!!</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/flexslider.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link href="jPlayer-2.9.2/dist/skin/pink.flag/css/jplayer.pink.flag.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/font-icon.css">
-    <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-</head>
 
 <body>
-<!-- header section -->
-<section class="banner" role="banner" id="banner">
-    <header id="header">
-        <div class="header-content clearfix"> <span class="logo"><a href="index.html">MusicWear</a></span>
-            <nav class="navigation" role="navigation">
-                <ul class="primary-nav">
-                    <li><a href="#banner">Home</a></li>
-                    <li><a href="#intro">Headphones</a></li>
-                    <li><a href="#services">Accessories</a></li>
-                    <li><a href="#Playlist">Login</a></li>
-                    <li><a href="#package">Cart</a></li>
-                </ul>
-            </nav>
-            <a href="#" class="nav-toggle">Menu<span></span></a> </div>
-    </header>
-    <!-- banner text -->
-    <div class="container">
-        <div class="col-md-10">
-            <div class="banner-text text-center">
-                <h1>Listen Music in Style</h1>
-            </div>
-            <!-- banner text -->
-        </div>
-    </div>
-</section>
-<!-- header section -->
+<?php
+require_once ("header.php");
+?>
+?>
 <!-- intro section -->
 <section id="intro" class="section intro">
     <div class="container">
@@ -440,38 +396,6 @@
     </div>
 </section>
 <!-- contact section -->
-<!-- Footer section -->
-<footer class="footer">
-    <div class="container-fluid">
-        <div id="map-row" class="row">
-            <div class="col-xs-12">
-                <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.uk/maps?f=q&source=s_q&hl=en&geocode=&q=15+Springfield+Way,+Hythe,+CT21+5SH&aq=t&sll=52.8382,-2.327815&sspn=8.047465,13.666992&ie=UTF8&hq=&hnear=15+Springfield+Way,+Hythe+CT21+5SH,+United+Kingdom&t=m&z=14&ll=51.077429,1.121722&output=embed"></iframe>
-
-                <div id="map-overlay" class="col-xs-5 col-xs-offset-6" style="">
-                    <h2 style="margin-top:0;color:#fff;">Contact us</h2>
-                    <address style="color:#fff;">
-                        <strong>Company name</strong><br>
-                        1234 Street Dr.<br>
-                        Vancouver, BC<br>
-                        Canada<br>
-                        V6G 1G9<br>
-                        <abbr title="Phone">Tel:</abbr> (604) 555-4321
-                    </address>
-                    © 2018 Company Name.</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- Footer section -->
-<!-- JS FILES -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.flexslider-min.js"></script>
-<script src="js/jquery.fancybox.pack.js"></script>
-<script src="js/retina.min.js"></script>
-<script src="js/modernizr.js"></script>
-<script src="js/main.js"></script>
-<script type="text/javascript" src="js/jquery.contact.js"></script>
-</body>
-</html>
+<?php
+require_once ("footer.php");
+?>
