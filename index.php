@@ -13,7 +13,6 @@ require_once ("commonScripts.php");
 <?php
 require_once ("header.php");
 ?>
-?>
 <!-- intro section -->
 <section id="intro" class="section intro">
     <div class="container">
@@ -54,85 +53,11 @@ require_once ("header.php");
         </div>
     </div>
 </section>
-<!-- package section -->
-<section id="package" class="packageList">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="wow fadeInDown animated">Our Albums</h2>
-            <p class="wow fadeInDown animated">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
+<!--services section-->
+<!--login section-->
 
-                <div class="package wow fadeInLeft animated" data-wow-offset="250" data-wow-delay="200ms">
-                    <h5>Earth Alive</h5>
-                    <ul class="list-default">
-                        <li>Lorem ipsum dolor sit amet, consectetur</li>
-                        <li>adipiscing eliteger gravida velit quis dolo</li>
-                        <li>Pellentesque elit tortor</li>
-                    </ul>
-                    <strong class="price"><small>$</small>38</strong>
-                </div><!-- end package -->
-
-                <div class="package wow fadeInLeft animated" data-wow-offset="200" data-wow-delay="300m">
-                    <h5>Light Blue</h5>
-                    <ul class="list-default">
-                        <li>Lorem ipsum dolor sit amet, consectetur</li>
-                        <li>adipiscing eliteger gravida velit quis dolo</li>
-                        <li>Pellentesque elit tortor</li>
-                    </ul>
-                    <strong class="price"><small>$</small>75</strong>
-                </div><!-- end package -->
-
-                <div class="package no-border wow fadeInLeft animated" data-wow-offset="150" data-wow-delay="400m" >
-                    <h5>Rock n Roll</h5>
-                    <ul class="list-default">
-                        <li>Lorem ipsum dolor sit amet, consectetur</li>
-                        <li>adipiscing eliteger gravida velit quis dolo</li>
-                        <li>Pellentesque elit tortor</li>
-                    </ul>
-                    <strong class="price"><small>$</small>46</strong>
-                </div><!-- end package -->
-
-            </div><!-- end col-md-6 -->
-            <div class="col-md-6">
-
-                <div class="package wow fadeInRight animated" data-wow-offset="250" data-wow-delay="500m" >
-                    <h5>Love Life</h5>
-                    <ul class="list-default">
-                        <li>Lorem ipsum dolor sit amet, consectetur</li>
-                        <li>adipiscing eliteger gravida velit quis dolo</li>
-                        <li>Pellentesque elit tortor</li>
-                    </ul>
-                    <strong class="price"><small>$</small>15</strong>
-                </div><!-- end package -->
-
-                <div class="package wow fadeInRight animated" data-wow-offset="200" data-wow-delay="600m">
-                    <h5>Back Street</h5>
-                    <ul class="list-default">
-                        <li>Lorem ipsum dolor sit amet, consectetur</li>
-                        <li>adipiscing eliteger gravida velit quis dolo</li>
-                        <li>Pellentesque elit tortor</li>
-                    </ul>
-                    <strong class="price"><small>$</small>84</strong>
-                </div><!-- end package -->
-
-                <div class="package no-border wow fadeInRight animated" data-wow-offset="150" data-wow-delay="700m">
-                    <h5>Golden Days</h5>
-                    <ul class="list-default">
-                        <li>Lorem ipsum dolor sit amet, consectetur</li>
-                        <li>adipiscing eliteger gravida velit quis dolo</li>
-                        <li>Pellentesque elit tortor</li>
-                    </ul>
-                    <strong class="price"><small>$</small>95</strong>
-                </div><!-- end package -->
-
-            </div><!-- end col-md-6 -->
-        </div><!-- end row -->
-    </div>
-</section>
-<!-- package section -->
-
+?>
+<!--login section-->
 <!-- gallery section -->
 <section id="gallery" class="gallery section">
     <div class="container-fluid">

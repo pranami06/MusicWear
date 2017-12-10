@@ -131,7 +131,7 @@ ul li {
 	text-decoration:none;
 	text-transform:uppercase;
 	letter-spacing:7px;
-	background: #ce0518;
+	background-image: url("../images/blue.jpg");
 	position: absolute;
 	top: 0px;
 	bottom: 0px;
@@ -154,6 +154,7 @@ ul li {
 }
 #header.fixed {
 	background-color: #010101;
+	background-image: url("../images/blue.jpg");
 	border-bottom: 1px solid #232323 !important;
 }
 #header.fixed a {
@@ -378,7 +379,7 @@ ul li {
 	$intro
 ========================================================================== */
 .intro {
-	background-color: #000;
+	background-image: url("../images/metal-texture-background-wallpaper-black-web.jpg");
 	/* color: #000; */
 }
 .intro h3 {
@@ -466,10 +467,6 @@ color: #fff;
 	font-weight: 600;
 	margin-bottom: 15px;
 }
-#Playlist{
-	padding:100px 0;
-	color: #fff;
-}
 /* ------------------------------------------------------------------------------
 	 gallery
 -------------------------------------------------------------------------------*/
@@ -555,7 +552,7 @@ color: #fff;
 -------------------------------------------------------------------------------*/
 .packageList {
 	padding: 100px 0;
-	background: #da1b2d;
+	background-image: url("../images/metal-texture-background-wallpaper-black-web.jpg");
 }
 h5 {
     font-size: 1.286em;
