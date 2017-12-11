@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="css/font-icon.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/login.css">
 
     <!-- JS FILES -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -39,4 +40,5 @@
     <script src="js/modernizr.js"></script>
     <script src="js/main.js"></script>
     <script type="text/javascript" src="js/jquery.contact.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
 </head>
