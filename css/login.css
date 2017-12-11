@@ -82,3 +82,6 @@ body, html {
     top: 0px;
     z-index:1;
 }
+.errors{
+    color: red;
+}

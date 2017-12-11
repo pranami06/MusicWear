@@ -6,9 +6,8 @@
  * Time: 4:57 PM
  */
 require_once ("commonScripts.php");
+require_once ("config.php");
 ?>
-
-
 <body>
 <?php
 require_once ("header.php");
