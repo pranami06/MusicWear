@@ -36,9 +36,19 @@ function isUserLoggedIn(){
         }
         else
         {
-            //destroySession("ThisUser");
+            destroySession("ThisUser");
             return false;
         }
+    }
+}
+
+//Destroys a session as part of logout
+function destroySession($name)
+{
+    if(isset($_SESSION[$name]))
+    {
+        $_SESSION[$name] = NULL;
+        unset($_SESSION[$name]);
     }
 }
 
