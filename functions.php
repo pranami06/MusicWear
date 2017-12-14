@@ -165,6 +165,7 @@ function fetchThisUser($username){
     $stmt = $mysqli->prepare("SELECT
 		UserName,
 		FName,
+		Email,
 		Password
 		FROM ".$db_table_prefix."user_info
 		WHERE
@@ -172,12 +173,13 @@ function fetchThisUser($username){
 		LIMIT 1");
     $stmt->bind_param("s", $username);
     $stmt->execute();
-    $stmt->bind_result($UserName, $FName, $Password);
+    $stmt->bind_result($UserName, $FName, $Email, $Password);
     $stmt -> execute();
     while ($stmt->fetch()){
         $row = array(
             'UserName' => $UserName,
             'FName' => $FName,
+            'Email' => $Email,
             'Password' => $Password
         );
     }
