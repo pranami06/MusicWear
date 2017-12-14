@@ -25,7 +25,7 @@ require_once ("config.php");
                         <h4>Pranami Jhawar</h4>
                     </div>
                     <ul class="social-icons clearfix">
-                        <li><a href="#" class=""><span class="fa fa-facebook"></span></a></li>
+                        <li><a href="https://www.facebook.com/jhawar.pranami" class=""><span class="fa fa-facebook"></span></a></li>
                         <li><a href="#" class=""><span class="fa fa-twitter"></span></a></li>
                         <li><a href="#" class=""><span class="fa fa-google-plus"></span></a></li>
                     </ul>
@@ -37,7 +37,7 @@ require_once ("config.php");
                         <h4>Ankit Sharma</h4>
                     </div>
                     <ul class="social-icons clearfix">
-                        <li><a href="#" class=""><span class="fa fa-facebook"></span></a></li>
+                        <li><a href="https://www.facebook.com/ankit9964" class=""><span class="fa fa-facebook"></span></a></li>
                         <li><a href="#" class=""><span class="fa fa-twitter"></span></a></li>
                         <li><a href="#" class=""><span class="fa fa-google-plus"></span></a></li>
                     </ul>

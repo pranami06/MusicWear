@@ -11,7 +11,7 @@
     <div class="container-fluid">
         <div id="map-row" class="row">
             <div class="col-xs-12">
-                <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="images/blue.jpg"></iframe>
+                <iframe width="100%" height="335" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="images/blue.jpg"></iframe>
 
                 <div id="map-overlay" class="col-xs-5 col-xs-offset-6">
                     <h3 style="margin-top:0;color:#fff;">NEED SOME HELP?</h3>
