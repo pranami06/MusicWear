@@ -12,17 +12,6 @@ require_once ("config.php");
 <?php
 require_once ("header.php");
 ?>
-<!-- intro section -->
-<section id="intro" class="section intro">
-    <div class="container">
-        <div class="col-md-8 col-md-offset-2 text-center">
-            <h3>Best Music Bootstrap Template</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu libero scelerisque ligula sagittis faucibus eget quis lacus.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <a href="#Playlist" class="btn btn-large">Playlist</a>
-        </div>
-    </div>
-</section>
-<!-- intro section -->
 <!-- services section -->
 <section id="services" class="services service-section">
     <div class="container">
