@@ -66,6 +66,7 @@ if(!empty($_POST))
 <?php
 require_once("navigationMenu.php");
 ?>
+<section>
 <div class="container">
     <div id="errors">
         <?php print_r($errors);?>
@@ -104,4 +105,5 @@ require_once("navigationMenu.php");
     </form>
 </div><!-- /.container -->
 <div id="particles-js"></div>
+</section>
 
