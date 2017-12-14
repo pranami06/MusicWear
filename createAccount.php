@@ -45,19 +45,9 @@ if(!empty($_POST))
 }
 ?>
 <body>
-<header id="header">
-    <div class="header-content clearfix"> <span class="logo"><a href="index.php">MusicWear</a></span>
-        <nav class="navigation" role="navigation">
-            <ul class="primary-nav">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="#intro">Headphones</a></li>
-                <li><a href="#services">Accessories</a></li>
-                <li><a href="#gallery">Cart</a></li>
-            </ul>
-        </nav>
-        <a href="#" class="nav-toggle">Menu<span></span></a>
-    </div>
-</header>
+<?php
+require_once("navigationMenu.php");
+?>
 <div class="container">
     <div id="login-box">
         <div class="logo">
@@ -96,4 +86,3 @@ if(!empty($_POST))
     </div><!-- /#login-box -->
 </div><!-- /.container -->
 <div id="particles-js"></div>
-</body>

@@ -9,6 +9,9 @@ require_once ("commonScripts.php");
 require_once ("config.php");
 ?>
 <body>
+<?php
+require_once("navigationMenu.php");
+?>
 <!-- services section -->
 <section id="services" class="services service-section">
     <div class="container">
