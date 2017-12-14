@@ -13,30 +13,29 @@ require_once ("config.php");
 <section id="services" class="services service-section">
     <div class="container">
         <div class="section-header">
-            <h2 class="wow fadeInDown animated">We Do</h2>
-            <p class="wow fadeInDown animated">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
+            <h2 style="color: white" class="wow fadeInDown animated">About Us</h2>
+            <p style="color: white" class="wow fadeInDown animated">Our primary vision is to provides all category headphones in the cheapest price.</p>
         </div>
         <div class="row">
             <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-recycle"></span>
                 <div class="services-content">
-                    <h5>ALBUMS</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu libero scelerisque ligula sagittis faucibus eget quis lacus.</p>
+                    <h5>CAREERS</h5>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-heart"></span>
                 <div class="services-content">
-                    <h5>MUSIC PLAYLIST</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu libero scelerisque ligula sagittis faucibus eget quis lacus.</p>
+                    <h5>PRIVACY POLICY</h5>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-megaphone"></span>
                 <div class="services-content">
-                    <h5>GALLERY</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu libero scelerisque ligula sagittis faucibus eget quis lacus.</p>
+                    <h5>TERMS OF USE</h5>
                 </div>
             </div>
         </div>
     </div>
 </section>
 <!--services section-->
-</body>
+<?php
+require_once ("footer.php");
+?>
