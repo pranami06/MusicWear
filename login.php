@@ -21,40 +21,44 @@ if(!empty($_POST))
 
     if(count($errors) == 0)
     {
-        //retrieve the records of the user who is trying to login
-        $userdetails = fetchThisUser($username);
+        $UserExists = checkIfUserExists($username);
+        $userFound = $UserExists[0];
+        if($userFound){
 
-        //Hash the password and use the salt from the database to compare the password.
-        $entered_pass = generateHash($password,$userdetails["Password"]);
+            //retrieve the records of the user who is trying to login
+            $userdetails = fetchThisUser($username);
 
-        if($entered_pass != $userdetails["Password"])
-        {
+            //Hash the password and use the salt from the database to compare the password.
+            $entered_pass = generateHash($password,$userdetails["Password"]);
 
-            $errors[] = "invalid password";
+            //check for correct password
+            if($username==$userdetails["UserName"] && $entered_pass != $userdetails["Password"])
+            {
+                $errors[] = "Invalid UserName or Password";
+            }
+            else
+            {
+                //Passwords match! we're good to go'
+                //Transfer some db data to the session object
+                $loggedInUser->email = $userdetails["Email"];
+                $loggedInUser->hash_pw = $userdetails["Password"];
+                $loggedInUser->first_name = $userdetails["FirstName"];
+                $loggedInUser->username = $userdetails["UserName"];
+
+                //pass the values of $loggedInUser into the session -
+                // you can directly pass the values into the array as well.
+
+                $_SESSION["ThisUser"] = $loggedInUser;
+
+                //now that a session for this user is created
+                //Redirect to this users account page
+                header("Location: index.php");
+                die();
+            }
         }
-        else
-        {
-            //Passwords match! we're good to go'
-            //Transfer some db data to the session object
-            $loggedInUser->email = $userdetails["Email"];
-            $loggedInUser->user_id = $userdetails["UserID"];
-            $loggedInUser->hash_pw = $userdetails["Password"];
-            $loggedInUser->first_name = $userdetails["FirstName"];
-            $loggedInUser->last_name = $userdetails["LastName"];
-            $loggedInUser->username = $userdetails["UserName"];
-            $loggedInUser->member_since = $userdetails["MemberSince"];
-
-            //pass the values of $loggedInUser into the session -
-            // you can directly pass the values into the array as well.
-
-            $_SESSION["ThisUser"] = $loggedInUser;
-
-            //now that a session for this user is created
-            //Redirect to this users account page
-            header("Location: index.php");
-            die();
+        else{
+            $errors[] = "User not found";
         }
-
     }
 }
 
@@ -86,6 +90,17 @@ if(!empty($_POST))
                     <h1 class="logo-caption"><span class="tweak">L</span>ogin</h1>
                 </div><!-- /.logo -->
                 <div class="controls">
+                    <div id="error">
+                        <span class="errors">
+                        <?php
+                        if($errors!=null){
+                            foreach ($errors as $error){
+                                echo $error."<br>";
+                            }
+                        }
+                        ?>
+                    </span>
+                    </div>
                     <input type="text" name="username" placeholder="Username" class="form-control controlSpacing" required />
                     <input type="password" name="password" placeholder="Password" class="form-control" required />
                     <button type="submit" class="btn btn-default btn-block btn-custom">Login</button>
