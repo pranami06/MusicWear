@@ -13,7 +13,7 @@
             <nav class="navigation" role="navigation">
                 <ul class="primary-nav">
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="#intro">Headphones</a></li>
+                    <li><a href="headphones.php">Headphones</a></li>
                     <li><a href="#services">Accessories</a></li>
                     <?php if (isUserLoggedIn()){?>
                         <li><a href="login.php">Log Out</a></li>
