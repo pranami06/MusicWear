@@ -43,7 +43,7 @@ if(!empty($_POST))
                 $loggedInUser->email = $userdetails["Email"];
                 $loggedInUser->hash_pw = $userdetails["Password"];
                 $loggedInUser->first_name = $userdetails["FirstName"];
-                $loggedInUser->username = $userdetails["UserName"];
+                $loggedInUser->user_name = $userdetails["UserName"];
 
                 //pass the values of $loggedInUser into the session -
                 // you can directly pass the values into the array as well.
@@ -61,60 +61,47 @@ if(!empty($_POST))
         }
     }
 }
-
-
-
 ?>
 <body>
-    <header id="header">
-        <div class="header-content clearfix"> <span class="logo"><a href="index.php">MusicWear</a></span>
-            <nav class="navigation" role="navigation">
-                <ul class="primary-nav">
-                    <li><a href="#banner">Home</a></li>
-                    <li><a href="#intro">Headphones</a></li>
-                    <li><a href="#services">Accessories</a></li>
-                    <li><a href="#gallery">Cart</a></li>
-                </ul>
-            </nav>
-            <a href="#" class="nav-toggle">Menu<span></span></a>
-        </div>
-    </header>
-    <div class="container">
-        <div id="errors">
-            <?php print_r($errors);?>
-        </div>
-        <form name='login' action="<?php $_SERVER['PHP_SELF']?>" method="post">
-            <div id="login-box">
-                <div class="logo">
-                    <img src="images/login.jpg" class="img img-responsive img-circle center-block"/>
-                    <h1 class="logo-caption"><span class="tweak">L</span>ogin</h1>
-                </div><!-- /.logo -->
-                <div class="controls">
-                    <div id="error">
-                        <span class="errors">
-                        <?php
-                        if($errors!=null){
-                            foreach ($errors as $error){
-                                echo $error."<br>";
-                            }
+<?php
+require_once("navigationMenu.php");
+?>
+<div class="container">
+    <div id="errors">
+        <?php print_r($errors);?>
+    </div>
+    <form name='login' action="<?php $_SERVER['PHP_SELF']?>" method="post">
+        <div id="login-box">
+            <div class="logo">
+                <img src="images/login.jpg" class="img img-responsive img-circle center-block"/>
+                <h1 class="logo-caption"><span class="tweak">L</span>ogin</h1>
+            </div><!-- /.logo -->
+            <div class="controls">
+                <div id="error">
+                    <span class="errors">
+                    <?php
+                    if($errors!=null){
+                        foreach ($errors as $error){
+                            echo $error."<br>";
                         }
-                        ?>
-                    </span>
+                    }
+                    ?>
+                </span>
+                </div>
+                <input type="text" name="username" placeholder="Username" class="form-control controlSpacing" required />
+                <input type="password" name="password" placeholder="Password" class="form-control" required />
+                <button type="submit" class="btn btn-default btn-block btn-custom">Login</button>
+                <div class="row">
+                    <div class="col-sm-7">
+                        <a class="loginLinks" href="#ResetPassword">Forgot Password</a>
                     </div>
-                    <input type="text" name="username" placeholder="Username" class="form-control controlSpacing" required />
-                    <input type="password" name="password" placeholder="Password" class="form-control" required />
-                    <button type="submit" class="btn btn-default btn-block btn-custom">Login</button>
-                    <div class="row">
-                        <div class="col-sm-7">
-                            <a class="loginLinks" href="#ResetPassword">Forgot Password</a>
-                        </div>
-                        <div class="col-sm-5">
-                            <a class="loginLinks" href="createAccount.php">Create Account</a>
-                        </div>
+                    <div class="col-sm-5">
+                        <a class="loginLinks" href="createAccount.php">Create Account</a>
                     </div>
-                </div><!-- /.controls -->
-            </div><!-- /#login-box -->
-        </form>
-    </div><!-- /.container -->
-    <div id="particles-js"></div>
-</body>
+                </div>
+            </div><!-- /.controls -->
+        </div><!-- /#login-box -->
+    </form>
+</div><!-- /.container -->
+<div id="particles-js"></div>
+
