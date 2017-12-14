@@ -15,6 +15,7 @@ if(isUserLoggedIn()) {
 if(!empty($_POST))
 {
     $errors = array();
+    $success = "";
     $email = trim($_POST["email"]);
     $username = trim($_POST["username"]);
     $firstname = trim($_POST["fname"]);
@@ -25,19 +26,21 @@ if(!empty($_POST))
 
     if($password != $confirm_pass)
     {
-        $errors[] = "Passwords do not match";
+        $errors[] = "Passwords do not match <br> Please fill in your details again..";
     }
 
     //End data validation
     if(count($errors) == 0)
     {
-        $user = createNewUser($username, $firstname, $lastname, $email, $password);
+        $user = createNewUser($email, $firstname, $lastname, $username, $password);
         if($user <> 1){
-            $errors[] = "Registration Error occured";
+            header("Location: registerationStatus.php?status=0"); die();
+            //$errors[] = "Registration Error occured";
         }
     }
     if(count($errors) == 0) {
-        $successes[] = "Registration Successful";
+        header("Location: registerationStatus.php?status=1"); die();
+        //$success = "Registration Successful";
     }
 }
 ?>

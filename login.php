@@ -11,6 +11,55 @@ require_once ("config.php");
 if(isUserLoggedIn()) {
     header("Location: index.php"); die();
 }
+
+//Form Posted
+if(!empty($_POST))
+{
+    $errors = array();
+    $username = trim($_POST["username"]);
+    $password = trim($_POST["password"]);
+
+    if(count($errors) == 0)
+    {
+        //retrieve the records of the user who is trying to login
+        $userdetails = fetchThisUser($username);
+
+        //Hash the password and use the salt from the database to compare the password.
+        $entered_pass = generateHash($password,$userdetails["Password"]);
+
+        if($entered_pass != $userdetails["Password"])
+        {
+
+            $errors[] = "invalid password";
+        }
+        else
+        {
+            //Passwords match! we're good to go'
+            //Transfer some db data to the session object
+            $loggedInUser->email = $userdetails["Email"];
+            $loggedInUser->user_id = $userdetails["UserID"];
+            $loggedInUser->hash_pw = $userdetails["Password"];
+            $loggedInUser->first_name = $userdetails["FirstName"];
+            $loggedInUser->last_name = $userdetails["LastName"];
+            $loggedInUser->username = $userdetails["UserName"];
+            $loggedInUser->member_since = $userdetails["MemberSince"];
+
+            //pass the values of $loggedInUser into the session -
+            // you can directly pass the values into the array as well.
+
+            $_SESSION["ThisUser"] = $loggedInUser;
+
+            //now that a session for this user is created
+            //Redirect to this users account page
+            header("Location: index.php");
+            die();
+        }
+
+    }
+}
+
+
+
 ?>
 <body>
     <header id="header">
@@ -37,9 +86,9 @@ if(isUserLoggedIn()) {
                     <h1 class="logo-caption"><span class="tweak">L</span>ogin</h1>
                 </div><!-- /.logo -->
                 <div class="controls">
-                    <input type="text" name="username" placeholder="Username" class="form-control controlSpacing" />
-                    <input type="password" name="password" placeholder="Password" class="form-control" />
-                    <button type="button" class="btn btn-default btn-block btn-custom">Login</button>
+                    <input type="text" name="username" placeholder="Username" class="form-control controlSpacing" required />
+                    <input type="password" name="password" placeholder="Password" class="form-control" required />
+                    <button type="submit" class="btn btn-default btn-block btn-custom">Login</button>
                     <div class="row">
                         <div class="col-sm-7">
                             <a class="loginLinks" href="#ResetPassword">Forgot Password</a>

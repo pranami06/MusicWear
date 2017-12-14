@@ -41,7 +41,147 @@ function isUserLoggedIn(){
         }
     }
 }
-function createNewUser($username, $firstname, $lastname, $email, $password){
 
+//function to fetch all Users
+function fetchAllUsers(){
+    global $mysqli, $db_table_prefix;
+    $stmt = $mysqli->prepare(
+        "SELECT
+		UID,
+		FName,
+		LName,
+		Email,
+		UserName,
+		Password
+		FROM " . $db_table_prefix . "user_info"
+    );
+    $stmt->execute();
+    $stmt->bind_result($UID, $FName, $LName, $Email, $UserName, $Password);
+    while ($stmt->fetch()){
+        $row[] = array('UID' => $UID,
+            'FName' => $FName,
+            'LName' => $LName,
+            'Email' => $Email,
+            'UserName' => $UserName,
+            'Password' => $Password);
+    }
+    $stmt->close();
+    return ($row);
+}
+
+//function for generating random user id
+function generateUserID(){
+    $character_array = array_merge(range('a', 'z'), range(0, 9), range('A','Z'));
+    $userID = "";
+    for ($i = 0; $i < 6; $i++) {
+        $userID .= $character_array[rand(
+            0, (count($character_array) - 1)
+        )];
+    }
+    return $userID;
+}
+
+//function to check if userExists
+function checkIfUserExists($userName){
+    //collecting all users data
+    $db_Users = fetchAllUsers();
+
+    //getting randomly generated UserID
+    $UID = generateUserID();
+
+    $ifUserExists = false;
+
+    //checking if userID or userName already Exists
+    foreach ($db_Users as $db_User){
+        if($db_User['UserName'] == $userName || $db_User['UID']== $UID){
+            $ifUserExists = true;
+            break;
+        }
+        else{
+            $ifUserExists = false;
+        }
+    }
+    return array($ifUserExists,$UID,$userName);
+
+}
+
+//function for generating hash password
+function generateHash($plainText, $salt = NULL) {
+    if ($salt === NULL) {
+        $salt = substr(md5(uniqid(rand(), TRUE)), 0, 25);
+    }
+    else {
+        $salt = substr($salt, 0, 25);
+    }
+    return $salt . sha1($salt . $plainText);
+}
+
+//function for creating new user
+function createNewUser($email, $firstname, $lastname, $username, $password){
+    global $mysqli, $db_table_prefix;
+
+    //collecting information about if user already exists
+    $ifUserExists = checkIfUserExists($username);
+    $duplicateUser = $ifUserExists[0];
+
+    //creating new user if user not exists (checking based on username or user id)
+    if($duplicateUser == false){
+        $UID = $ifUserExists[1];
+        $UserName = $ifUserExists[2];
+        $hashPassword = generateHash($password);
+        $stmt = $mysqli->prepare(
+            "INSERT INTO " . $db_table_prefix . "user_info (
+		UID,
+		FName,
+		LName,
+		Email,
+		UserName,
+		Password
+		)
+		VALUES (
+		?,
+		?,
+		?,
+		?,
+		?,
+		?
+		)"
+        );
+        $stmt->bind_param("ssssss", $UID, $firstname, $lastname, $email, $UserName, $hashPassword);
+        $result = $stmt->execute();
+        $stmt->close();
+    }
+    else{
+        //if user already exists
+        $result = 0;
+    }
+
+    return $result;
+}
+
+//function for fetching UserData based on Username
+function fetchThisUser($username){
+    global $mysqli,$db_table_prefix;
+    $stmt = $mysqli->prepare("SELECT
+		UserName,
+		FName,
+		Password
+		FROM ".$db_table_prefix."user_info
+		WHERE
+		UserName = ?
+		LIMIT 1");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $stmt->bind_result($UserName, $FName, $Password);
+    $stmt -> execute();
+    while ($stmt->fetch()){
+        $row = array(
+            'UserName' => $UserName,
+            'FName' => $FName,
+            'Password' => $Password
+        );
+    }
+    $stmt->close();
+    return ($row);
 }
 ?>
