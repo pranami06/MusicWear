@@ -40,15 +40,16 @@ require_once ("config.php");
     </div>
 </section>
 <!-- header section -->
-<!-- gallery section -->
+<!-- popular product section -->
 <section id="gallery" class="gallery section">
     <div class="container-fluid">
         <div class="section-header">
-            <h2 class="wow fadeInDown animated">Events</h2>
-            <p class="wow fadeInDown animated">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
+            <h2 class="wow fadeInDown animated">Our Best selling Products</h2>
         </div>
         <div class="row no-gutter">
-            <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/portfolio/01.jpg" class="work-box"> <img src="images/portfolio/01.jpg" alt="">
+            <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/headphone%20product%20images/beats/443_tile_0001_MQUF2-RGB-thrqtrlft.png" class="work-box"> <img src="images/headphone%20product%20images/beats/443_tile_0001_MQUF2-RGB-thrqtrlft.png" alt="">
+                    <h4 style="color: steelblue">Beats Studio-3</h4>
+                    <h6 style="color: red">Price - $249.00</h6>
                     <div class="overlay">
                         <div class="overlay-caption">
                             <p><span class="icon icon-magnifying-glass"></span></p>
@@ -56,7 +57,9 @@ require_once ("config.php");
                     </div>
                     <!-- overlay -->
                 </a> </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/portfolio/02.jpg" class="work-box"> <img src="images/portfolio/02.jpg" alt="">
+            <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/headphone%20product%20images/JBL/jbl-e45bt-wireless-on-ear-bluetooth-headphones-d-2017052212363088_561213_339.jpg" class="work-box"> <img src="images/headphone%20product%20images/JBL/jbl-e45bt-wireless-on-ear-bluetooth-headphones-d-2017052212363088_561213_339.jpg" alt="">
+                    <h4 style="color: steelblue">JBL E45BT</h4>
+                    <h6 style="color: red">Price - $149.00</h6>
                     <div class="overlay">
                         <div class="overlay-caption">
                             <p><span class="icon icon-magnifying-glass"></span></p>
@@ -64,7 +67,9 @@ require_once ("config.php");
                     </div>
                     <!-- overlay -->
                 </a> </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/portfolio/03.jpg" class="work-box"> <img src="images/portfolio/03.jpg" alt="">
+            <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/headphone%20product%20images/Marshall/marshall_monitorbt_900x900b_t_347.png" class="work-box"> <img src="images/headphone%20product%20images/Marshall/marshall_monitorbt_900x900b_t_347.png" alt="">
+                    <h4 style="color: steelblue">Marshall monitor 2.0</h4>
+                    <h6 style="color: red">Price - $149.00</h6>
                     <div class="overlay">
                         <div class="overlay-caption">
                             <p><span class="icon icon-magnifying-glass"></span></p>
@@ -72,7 +77,9 @@ require_once ("config.php");
                     </div>
                     <!-- overlay -->
                 </a> </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/portfolio/04.jpg" class="work-box"> <img src="images/portfolio/04.jpg" alt="">
+            <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/headphone%20product%20images/V-moda/71dxCQKqqAL._SY355_.jpg" class="work-box"> <img src="images/headphone%20product%20images/V-moda/71dxCQKqqAL._SY355_.jpg" alt="">
+                    <h4 style="color: steelblue">V-moda crossfade</h4>
+                    <h6 style="color: red">Price - $299.00</h6>
                     <div class="overlay">
                         <div class="overlay-caption">
                             <p><span class="icon icon-magnifying-glass"></span></p>
@@ -80,7 +87,9 @@ require_once ("config.php");
                     </div>
                     <!-- overlay -->
                 </a> </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/portfolio/05.jpg" class="work-box"> <img src="images/portfolio/05.jpg" alt="">
+            <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/headphone%20product%20images/V-moda/Headphone-zone-v-moda-forza-metallo-black-earphone_1_900x.jpg" class="work-box"> <img src="images/headphone%20product%20images/V-moda/Headphone-zone-v-moda-forza-metallo-black-earphone_1_900x.jpg" alt="">
+                    <h4 style="color: steelblue">V-moda Zn</h4>
+                    <h6 style="color: red">Price - $149.00</h6>
                     <div class="overlay">
                         <div class="overlay-caption">
                             <p><span class="icon icon-magnifying-glass"></span></p>
@@ -88,7 +97,9 @@ require_once ("config.php");
                     </div>
                     <!-- overlay -->
                 </a> </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/portfolio/06.jpg" class="work-box"> <img src="images/portfolio/06.jpg" alt="">
+            <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/headphone%20product%20images/Skullcandy/5589000_rd.jpg" class="work-box"> <img src="images/headphone%20product%20images/Skullcandy/5589000_rd.jpg" alt="">
+                    <h4 style="color: steelblue">Skullcandy Crusher</h4>
+                    <h6 style="color: red">Price - $99.00</h6>
                     <div class="overlay">
                         <div class="overlay-caption">
                             <p><span class="icon icon-magnifying-glass"></span></p>
@@ -96,7 +107,9 @@ require_once ("config.php");
                     </div>
                     <!-- overlay -->
                 </a> </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/portfolio/07.jpg" class="work-box"> <img src="images/portfolio/07.jpg" alt="">
+            <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/headphone%20product%20images/JBL/JBL-handsfree-earphone-wired-buy-online-sri-lanka-choice-lk-4.jpg" class="work-box"> <img src="images/headphone%20product%20images/JBL/JBL-handsfree-earphone-wired-buy-online-sri-lanka-choice-lk-4.jpg" alt="">
+                    <h4 style="color: steelblue">JBL Reflect miniBT</h4>
+                    <h6 style="color: red">Price - $39.00</h6>
                     <div class="overlay">
                         <div class="overlay-caption">
                             <p><span class="icon icon-magnifying-glass"></span></p>
@@ -104,7 +117,9 @@ require_once ("config.php");
                     </div>
                     <!-- overlay -->
                 </a> </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/portfolio/08.jpg" class="work-box"> <img src="images/portfolio/08.jpg" alt="">
+            <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/headphone%20product%20images/Marshall/51E80Hj3f+L._SL500_AC_SS350_.jpg" class="work-box"> <img src="images/headphone%20product%20images/Marshall/51E80Hj3f+L._SL500_AC_SS350_.jpg" alt="">
+                    <h4 style="color: steelblue">Marshal ModeEQ</h4>
+                    <h6 style="color: red">Price - $79.00</h6>
                     <div class="overlay">
                         <div class="overlay-caption">
                             <p><span class="icon icon-magnifying-glass"></span></p>
@@ -115,54 +130,7 @@ require_once ("config.php");
         </div>
     </div>
 </section>
-<!-- gallery section -->
-
-<!-- our team section -->
-<section id="tours" class="section teams">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="wow fadeInDown animated">Upcoming Shows</h2>
-            <p class="wow fadeInDown animated">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa <br> semper aliquam quis mattis quam.</p>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <img src="images/pic2.jpg" class="img-responsive" alt="">
-            </div>
-            <div class="col-md-6">
-                <div class="col-md-11">
-                    <h3>Our Tours</h3>
-                    <ul class="tour-list">
-                        <li>
-                            <div class="tour-date">16<span>Feb<br><em>2016</em></span></div>
-                            <div class="tour-info">NewYork, US - <a href="#">Music Area</a></div>
-                            <div class="tour-ticket"><a href="#">Buy Ticket</a></div>
-                        </li>
-                        <li>
-                            <div class="tour-date">22<span>Mar<br><em>2016</em></span></div>
-                            <div class="tour-info">Delhi, Ind - <a href="#">Open Theater</a></div>
-                            <div class="tour-ticket"><a href="#">Buy Ticket</a></div>
-                        </li>
-                        <li>
-                            <div class="tour-date">12<span>April<br><em>2016</em></span></div>
-                            <div class="tour-info">Texas, US - <a href="#">Eden Gardens</a></div>
-                            <div class="tour-ticket"><a href="#">Buy Ticket</a></div>
-                        </li>
-                        <li>
-                            <div class="tour-date">26<span>April<br><em>2016</em></span></div>
-                            <div class="tour-info">England, UK - <a href="#">BNK Stadium</a></div>
-                            <div class="tour-ticket"><a href="#">Buy Ticket</a></div>
-                        </li>
-                        <li>
-                            <div class="tour-date">10<span>June<br><em>2016</em></span></div>
-                            <div class="tour-info">Tokiyo, Japan - <a href="#">KMT Grounds</a></div>
-                            <div class="tour-ticket"><a href="#">Buy Ticket</a></div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- popular products -->
 
 <!-- Testimonials section -->
 <section id="testimonials" class="section testimonials no-padding">
@@ -173,36 +141,31 @@ require_once ("config.php");
                     <li>
                         <div class="col-md-12">
                             <blockquote>
-                                <h1>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa
-                                    semper aliquam quis mattis consectetur adipiscing elit.." </h1>
-                                <p>Chris Mentsl</p>
+                                <img style="width: 200px; height: 200px;position: absolute" src="images/headphone%20product%20images/Marshall/marshall_monitorbt_900x900b_t_347.png">
+                                <h4>Top Deals</h4>
+                                <h1>"Marshal Monitor 2.0 Bluetooth headset" </h1>
                             </blockquote>
                         </div>
                     </li>
                     <li>
                         <div class="col-md-12">
                             <blockquote>
-                                <h1>"Praesent eget risus vitae massa Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa
-                                    semper aliquam quis mattis consectetur adipiscing elit.." </h1>
-                                <p>Kristean velnly</p>
+                                <img style="width: 200px; height: 200px; position: absolute" src="images/headphone%20product%20images/beats/41m-yVNdofL._SL500_AC_SS350_.jpg">
+                                <h1>  "Beats pro"</h1>
                             </blockquote>
                         </div>
                     </li>
                     <li>
                         <div class="col-md-12">
                             <blockquote>
-                                <h1>"Consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa
-                                    semper aliquam quis mattis consectetur adipiscing elit.." </h1>
-                                <p>Markus Denny</p>
+                                <h1> </h1>
                             </blockquote>
                         </div>
                     </li>
                     <li>
                         <div class="col-md-12">
                             <blockquote>
-                                <h1>"Vitae massa semper aliquam Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa
-                                    semper aliquam quis mattis consectetur adipiscing elit.." </h1>
-                                <p>John Doe</p>
+                                <h1></h1>
                             </blockquote>
                         </div>
                     </li>
