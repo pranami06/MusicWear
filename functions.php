@@ -196,4 +196,25 @@ function fetchThisUser($username){
     $stmt->close();
     return ($row);
 }
+
+//function to submit message in db
+function submitMessage($name,$email,$comments){
+    global $mysqli, $db_table_prefix;
+    $stmt = $mysqli->prepare(
+        "INSERT INTO " . $db_table_prefix . "contact_us (
+            CEmail,
+            CName,
+		    CMessage
+            )
+            VALUES (            
+            ?,
+            ?,
+            ?
+            )"
+    );
+    $stmt->bind_param("sss", $email, $name, $comments);
+    $result = $stmt->execute();
+    $stmt->close();
+    return $result;
+}
 ?>

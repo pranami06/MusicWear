@@ -18,7 +18,14 @@ require_once ("config.php");
                     <li><a href="headphones.php">Headphones</a></li>
                     <li><a href="#services">Accessories</a></li>
                     <?php if (isUserLoggedIn()){?>
-                        <li><a href="logOut.php">Log Out</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Hi &nbsp <?php echo "$loggedInUser->first_name";?>
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li style="background-color: transparent"><a href="logOut.php">Log Out</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#gallery">Cart</a></li>
                     <?php }else{?>
                         <li><a href="login.php">Login</a></li>
