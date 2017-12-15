@@ -955,3 +955,22 @@ color:#404040;
     color: steelblue;
     padding-bottom: 10px;
 }
+.dropdown-menu{
+	left: 40px;
+	min-width: 90px;
+	width: 100px;
+	background-color: black;
+	border-color: black;
+}
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
+	background-color: black;
+}
+.dropdown-menu>li>a{
+	margin-left: 0px;
+	padding: 2px 15px;
+	color: white;
+	background-color: black;
+}
+.dropdown-menu:hover{
+	border-color: dimgray;
+}

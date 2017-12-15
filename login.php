@@ -42,7 +42,7 @@ if(!empty($_POST))
                 //Transfer some db data to the session object
                 $loggedInUser->email = $userdetails["Email"];
                 $loggedInUser->hash_pw = $userdetails["Password"];
-                $loggedInUser->first_name = $userdetails["FirstName"];
+                $loggedInUser->first_name = $userdetails["FName"];
                 $loggedInUser->user_name = $userdetails["UserName"];
 
                 //pass the values of $loggedInUser into the session -
