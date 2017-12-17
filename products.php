@@ -7,9 +7,28 @@
  */
 require_once ("commonScripts.php");
 require_once ("config.php");
-//$brandID = $_GET["BId"];
-$brandID = 1;
+
+//collecting BrandID
+$brandID = $_GET["BId"];
+
+//fetching products based on Brand ID
 $products = fetchProductsBasedOnBID($brandID);
+
+//arrays for collecting Product's details separately
+$PNames = array();
+$PPDescs = array();
+$PPrices = array();
+$PImages = array();
+$PIDs = array();
+
+//collecting details separately
+foreach ($products as $product){
+  $PNames[] = $product['PName'];
+  $PPDescs[] = $product['PDesc'];
+  $PPrices[] = $product['PPrice'];
+  $PImages[] = $product['PImgID'];
+  $PIDs[] = $product['PID'];
+}
 ?>
 <body>
 <?php
@@ -22,20 +41,20 @@ require_once("navigationMenu.php");
         </div>
         <div class="row no-gutter">
             <div class="jumbotron col-lg-3 col-md-6 col-sm-6 col-md-offset-1 work">
-                <a href="images/headphone%20product%20images/beats/443_tile_0001_MQUF2-RGB-thrqtrlft.png" class="work-box">
-                    <img src="images/headphone%20product%20images/beats/443_tile_0001_MQUF2-RGB-thrqtrlft.png" alt="">
+                <a href="#" class="work-box">
+                    <img src="images/product_images/beats/<?php echo $PImages[0]?>.jpg" alt="">
                     <div class="overlay">
                         <div class="overlay-caption">
                             <p><span class="icon icon-magnifying-glass"></span></p>
                         </div>
                     </div><!-- overlay -->
                 </a>
-                <h4 class="products-name">Beats Studio-3</h4>
+                <h4 class="products-name"><?php echo $PNames[0]?></h4>
                 <h6 style="color: red">Price - $249.00</h6>
             </div>
             <div class="jumbotron col-lg-3 col-md-6 col-sm-6 work products-div">
-                <a href="images/headphone%20product%20images/JBL/jbl-e45bt-wireless-on-ear-bluetooth-headphones-d-2017052212363088_561213_339.jpg" class="work-box">
-                    <img src="images/headphone%20product%20images/JBL/jbl-e45bt-wireless-on-ear-bluetooth-headphones-d-2017052212363088_561213_339.jpg" alt="">
+                <a href="#" class="work-box">
+                    <img src="images/product_images/beats/<?php echo $PImages[1]?>.jpg" alt="">
                     <div class="overlay">
                         <div class="overlay-caption">
                             <p><span class="icon icon-magnifying-glass"></span></p>
@@ -43,7 +62,7 @@ require_once("navigationMenu.php");
                     </div>
                     <!-- overlay -->
                 </a>
-                <h4 class="products-name">JBL E45BT</h4>
+                <h4 class="products-name"><?php echo $PNames[1]?></h4>
                 <h6 style="color: red">Price - $149.00</h6>
             </div>
             <div class="jumbotron col-lg-3 col-md-6 col-sm-6 work products-div">

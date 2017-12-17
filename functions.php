@@ -219,7 +219,35 @@ function submitMessage($name,$email,$comments){
 }
 
 //function to fetch products based on Brand ID
-function fetchProductsBasedOnBID(){
+function fetchProductsBasedOnBID($BId){
+    global $mysqli,$db_table_prefix;
+    $stmt = $mysqli->prepare("SELECT
+		PID,
+		PImgID,
+		BID,
+		PName,
+		PDesc,
+		PPrice
+		FROM ".$db_table_prefix."product_info
+		WHERE
+		BID = ?
+		");
+    $stmt->bind_param("i", $BId);
+    $stmt->execute();
+    $stmt->bind_result($PID, $PImgID, $BID, $PName, $PDesc, $PPrice);
+    $stmt -> execute();
+    while ($stmt->fetch()){
+        $row[] = array(
+            'PID' => $PID,
+            'PImgID' => $PImgID,
+            'BID' => $BID,
+            'PName' => $PName,
+            'PDesc' => $PDesc,
+            'PPrice' => $PPrice
+        );
+    }
+    $stmt->close();
+    return ($row);
 
 }
 
