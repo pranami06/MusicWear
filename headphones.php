@@ -7,6 +7,11 @@
  */
 require_once ("commonScripts.php");
 require_once ("config.php");
+$brandImgIDs = fetchAllBrandImgID();
+$brand = array();
+foreach ($brandImgIDs as $brandImgID){
+    $brand[] = $brandImgID;
+}
 ?>
 <body>
 <?php
@@ -21,16 +26,16 @@ require_once("navigationMenu.php");
         <div class="row">
             <div class="col-md-4 col-sm-6 col-md-offset-2 services text-center"> <span class="icon icon-recycle"></span>
                 <div class="services-content">
-                    <a href="ourTeam.php" class="work-box">
-                        <img style="height: 300px; width: 300px;" src="images/product_images/beats/beats-by-dre-wallpaper-20869-21406-hd-wallpapers.jpg" alt="">
+                    <a href="products.php?BId=1" class="work-box">
+                        <img style="height: 300px; width: 300px;" src="images/brands/<?php echo $brand[0]['BImgID']?>.jpg" alt="">
                     </a>
                     <h3 style="color: white">BEATS</h3>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-heart"></span>
                 <div class="services-content">
-                    <a href="#" class="work-box">
-                        <img style="height: 300px; width: 300px" src="images/product_images/JBL/maxresdefault.jpg" alt="">
+                    <a href="products.php?BId=2" class="work-box">
+                        <img style="height: 300px; width: 300px" src="images/brands/<?php echo $brand[1]['BImgID']?>.jpg" alt="">
                     </a>
                     <h3 style="color: white">JBL</h3>
                 </div>
@@ -39,16 +44,16 @@ require_once("navigationMenu.php");
         <div class="row no-padding">
             <div class="col-md-4 col-sm-6 col-md-offset-2 services text-center"> <span class="icon icon-megaphone"></span>
                 <div class="services-content">
-                    <a href="#" class="work-box">
-                        <img style="height: 300px; width: 300px" src="images/product_images/Marshall/3125820-marshall-wallpapers.jpg" alt="">
+                    <a href="products.php?BId=3" class="work-box">
+                        <img style="height: 300px; width: 300px" src="images/brands/<?php echo $brand[2]['BImgID']?>.jpg" alt="">
                     </a>
                         <h3 style="color: white">Marshall</h3>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-megaphone"></span>
                 <div class="services-content">
-                    <a href="#" class="work-box">
-                        <img style="height: 300px; width: 300px" src="images/product_images/Skullcandy/skullcandy_wallpaper_background_by_timsaunders-d50835r.jpg" alt="">
+                    <a href="products.php?BId=4" class="work-box">
+                        <img style="height: 300px; width: 300px" src="images/brands/<?php echo $brand[3]['BImgID']?>.jpg" alt="">
                     </a>
                     <h3 style="color: white">Skullcandy</h3>
                 </div>
@@ -57,16 +62,16 @@ require_once("navigationMenu.php");
         <div class="row">
             <div class="col-md-4 col-sm-6 col-md-offset-2 services text-center"> <span class="icon icon-megaphone"></span>
                 <div class="services-content">
-                    <a href="#" class="work-box">
-                        <img style="height: 300px; width: 300px" src="images/product_images/Sony/wonderful-sony-wallpaper-41202-42212-hd-wallpapers.jpg" alt="">
+                    <a href="products.php?BId=5" class="work-box">
+                        <img style="height: 300px; width: 300px" src="images/brands/<?php echo $brand[4]['BImgID']?>.jpg" alt="">
                     </a>
                     <h3 style="color: white">Sony</h3>
                 </div>
             </div>
             <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-megaphone"></span>
                 <div class="services-content">
-                    <a href="#" class="work-box">
-                        <img style="height: 300px; width: 300px" src="images/product_images/V-moda/download.png" alt="">
+                    <a href="products.php?BId=6" class="work-box">
+                        <img style="height: 300px; width: 300px" src="images/brands/<?php echo $brand[5]['BImgID']?>.png"" alt="">
                     </a>
                     <h3 style="color: white">V-moda</h3>
                 </div>
