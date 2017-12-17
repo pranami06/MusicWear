@@ -217,4 +217,9 @@ function submitMessage($name,$email,$comments){
     $stmt->close();
     return $result;
 }
+
+//function to fetch products based on Brand ID
+function fetchProductsBasedOnBID(){
+
+}
 ?>
