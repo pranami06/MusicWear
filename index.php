@@ -104,7 +104,7 @@ require_once ("config.php");
                     </div>
                     <!-- overlay -->
                 </a> </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/product_images/Skullcandy/3.jpg" class="work-box"> <img src="images/product_images/Skullcandy/3.jpg" alt="">
+            <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/product_images/Skullcandy/3.jpg" class="work-box"> <img  src="images/product_images/Skullcandy/3.jpg" alt="">
                     <h4 style="color: steelblue">Skullcandy Crusher</h4>
                     <h6 style="color: red">Price - $99.00</h6>
                     <div class="overlay">
@@ -147,33 +147,58 @@ require_once ("config.php");
                 <ul class="slides">
                     <li>
                         <div class="col-md-12">
+                            <hr>
+                            <h2 style="color: white">Top Deals</h2>
+                            <hr>
                             <blockquote>
-                                <img style="width: 200px; height: 200px;position: absolute" src="images/product_images/Marshall/marshall_monitorbt_900x900b_t_347.png">
-                                <h4>Top Deals</h4>
-                                <h1>"Marshal Monitor 2.0 Bluetooth headset" </h1>
+                                <img class="sliderimage" src="images/product_images/Marshall/3.png">
+                                <h2>"Marshal Monitor" </h2>
+                                <h1> Regular price- $199</h1>
+                                <h1 style="color: red"> Our price- $149</h1>
                             </blockquote>
+                            <hr>
                         </div>
                     </li>
                     <li>
                         <div class="col-md-12">
+                            <hr>
+                            <h2 style="color: white">Top Deals</h2>
+                            <hr>
                             <blockquote>
-                                <img style="width: 200px; height: 200px; position: absolute" src="images/product_images/beats/41m-yVNdofL._SL500_AC_SS350_.jpg">
-                                <h1>  "Beats pro"</h1>
+                                <img class="sliderimage" src="images/product_images/beats/2.png">
+                                <h2>  "Beats studio 3"</h2>
+                                <h1> Regular price- $299</h1>
+                                <h1 style="color: red"> Our price- $249</h1>
                             </blockquote>
+                            <hr>
                         </div>
                     </li>
                     <li>
                         <div class="col-md-12">
+                            <hr>
+                            <h2 style="color: white">Top Deals</h2>
+                            <hr>
                             <blockquote>
-                                <h1> </h1>
+                                <img class="sliderimage" src="images/product_images/Skullcandy/3.jpg">
+                                <h2>  "Skullcandy crusher"</h2>
+                                <h1> Regular price- $199</h1>
+                                <h1 style="color: red"> Our price- $129</h1>
                             </blockquote>
+                            <hr>
                         </div>
                     </li>
                     <li>
                         <div class="col-md-12">
+                            <hr>
+                            <h2 style="color: white">Top Deals</h2>
+                            <hr>
                             <blockquote>
-                                <h1></h1>
+                                <img class="sliderimage" src="images/product_images/beats/4.jpg">
+                                <h2>  "Beats solo 3"</h2>
+                                <h1> Regular price- $299</h1>
+                                <h1 style="color: red"> Our price- $199</h1>
                             </blockquote>
+                            <hr>
                         </div>
                     </li>
                 </ul>
