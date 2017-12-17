@@ -222,4 +222,23 @@ function submitMessage($name,$email,$comments){
 function fetchProductsBasedOnBID(){
 
 }
+
+//function for fetching Brands Image ID
+function fetchAllBrandImgID(){
+    global $mysqli, $db_table_prefix;
+    $stmt = $mysqli->prepare(
+        "SELECT
+		BImgID
+		FROM " . $db_table_prefix . "brand_info"
+    );
+    $stmt->execute();
+    $stmt->bind_result($BImgID);
+    while ($stmt->fetch()){
+        $row[] = array(
+            'BImgID' => $BImgID,
+        );
+    }
+    $stmt->close();
+    return ($row);
+}
 ?>
