@@ -686,10 +686,13 @@ ul.list-default li {
 	padding: 100px 15%;
 }
 .testimonials h1 {
-	color: rgba(255, 255, 255, 0.87);
+	color: white;
 	font-weight: 300;
 	font-size: 22px;
 	line-height: 30px;
+}
+.testimonials h2 {
+	color: steelblue;
 }
 .testimonials p {
 	color: #fff;
@@ -703,12 +706,17 @@ ul.list-default li {
 }
 .flex-control-nav {
 	margin-top: 2%;
-	position: relative!important;
+	position:relative !important;
 	right: 0;
 	text-align: center;
 	width: 100%!important;
 	z-index: 100;
 	opacity: 0.2;
+}
+.sliderimage {
+	height: 200px;
+	width: 200px;
+	position: absolute;
 }
 
 
