@@ -7,6 +7,7 @@
  */
 require_once ("commonScripts.php");
 require_once ("config.php");
+
 ?>
 <body>
 <?php
@@ -21,7 +22,7 @@ require_once("navigationMenu.php");
         <div class="row">
             <div class="col-md-4 col-sm-6 col-md-offset-2 services text-center"> <span class="icon icon-recycle"></span>
                 <div class="services-content">
-                    <a href="ourTeam.php" class="work-box">
+                    <a href="products.php?BId=1" class="work-box">
                         <img style="height: 300px; width: 300px;" src="images/headphone%20product%20images/beats/beats-by-dre-wallpaper-20869-21406-hd-wallpapers.jpg" alt="">
                     </a>
                     <h3 style="color: white">BEATS</h3>
@@ -29,7 +30,7 @@ require_once("navigationMenu.php");
             </div>
             <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-heart"></span>
                 <div class="services-content">
-                    <a href="#" class="work-box">
+                    <a href="products.php?BId=2" class="work-box">
                         <img style="height: 300px; width: 300px" src="images/headphone%20product%20images/JBL/maxresdefault.jpg" alt="">
                     </a>
                     <h3 style="color: white">JBL</h3>
@@ -39,7 +40,7 @@ require_once("navigationMenu.php");
         <div class="row no-padding">
             <div class="col-md-4 col-sm-6 col-md-offset-2 services text-center"> <span class="icon icon-megaphone"></span>
                 <div class="services-content">
-                    <a href="#" class="work-box">
+                    <a href="products.php?BId=3" class="work-box">
                         <img style="height: 300px; width: 300px" src="images/headphone%20product%20images/Marshall/3125820-marshall-wallpapers.jpg" alt="">
                     </a>
                         <h3 style="color: white">Marshall</h3>
@@ -47,7 +48,7 @@ require_once("navigationMenu.php");
             </div>
             <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-megaphone"></span>
                 <div class="services-content">
-                    <a href="#" class="work-box">
+                    <a href="products.php?BId=4" class="work-box">
                         <img style="height: 300px; width: 300px" src="images/headphone%20product%20images/Skullcandy/skullcandy_wallpaper_background_by_timsaunders-d50835r.jpg" alt="">
                     </a>
                     <h3 style="color: white">Skullcandy</h3>
@@ -57,7 +58,7 @@ require_once("navigationMenu.php");
         <div class="row">
             <div class="col-md-4 col-sm-6 col-md-offset-2 services text-center"> <span class="icon icon-megaphone"></span>
                 <div class="services-content">
-                    <a href="#" class="work-box">
+                    <a href="products.php?BId=5" class="work-box">
                         <img style="height: 300px; width: 300px" src="images/headphone%20product%20images/Sony/wonderful-sony-wallpaper-41202-42212-hd-wallpapers.jpg" alt="">
                     </a>
                     <h3 style="color: white">Sony</h3>
@@ -65,7 +66,7 @@ require_once("navigationMenu.php");
             </div>
             <div class="col-md-4 col-sm-6 services text-center"> <span class="icon icon-megaphone"></span>
                 <div class="services-content">
-                    <a href="#" class="work-box">
+                    <a href="products.php?BId=6" class="work-box">
                         <img style="height: 300px; width: 300px" src="images/headphone%20product%20images/V-moda/download.png" alt="">
                     </a>
                     <h3 style="color: white">V-moda</h3>
