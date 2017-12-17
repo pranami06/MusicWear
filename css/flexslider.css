@@ -31,7 +31,7 @@
   -webkit-backface-visibility: hidden;
 }
 .flexslider .slides img {
-  width: 100%;
+  width:200px;
   display: block;
 }
 .flexslider .slides:after {
@@ -62,7 +62,7 @@ html[xmlns] .flexslider .slides {
   zoom: 1;
 }
 .flexslider .slides img {
-  height: auto;
+  height: 200px;
 }
 .flex-viewport {
   max-height: 2000px;
