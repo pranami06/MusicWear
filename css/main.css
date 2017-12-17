@@ -974,3 +974,16 @@ color:#404040;
 .dropdown-menu:hover{
 	border-color: dimgray;
 }
+.products-name{
+	color: steelblue;
+	text-align: center;
+	font-weight: bolder;
+}
+.products-div{
+	margin-left: 40px;
+}
+.products-price{
+	color: indianred;
+	text-align: center;
+	font-weight: bold;
+}
