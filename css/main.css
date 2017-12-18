@@ -988,12 +988,6 @@ color:#404040;
 .products-div{
 	margin-left: 80px;
 }
-.products-name{
-	margin-top: 40px;
-	color: steelblue;
-	text-align: center;
-	font-weight: bolder;
-}
 .products-price {
 	color: indianred;
 	text-align: center;
@@ -1001,9 +995,9 @@ color:#404040;
 	font-size: medium;
 }
 .product-image{
-	margin-left: 200px;
-	height: 300px;
-	width: 300px;
+	margin-left: 180px;
+	height: 250px;
+	width: 250px;
 	margin-top: 50px;
 }
 .btn-cart{
@@ -1012,8 +1006,11 @@ color:#404040;
 	height: 30px;
 
 }
-.product-detail{
+.product-name{
 	margin-top: 50px;
+    color: slateblue;
+    font-weight: bolder;
+    font-size: 30px;
 }
 .btn-kart{
 	margin-top: 20px;
@@ -1026,7 +1023,7 @@ color:#404040;
 }
 .viewproduct-price{
 	margin-left: -400px;
-	color: red;
+    color: indianred;
 }
 .viewproduct-divider{
 	display: block;

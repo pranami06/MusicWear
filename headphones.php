@@ -34,7 +34,7 @@ require_once("navigationMenu.php");
             <?php for($x = 0; $x<sizeof($brandImgID); $x++){?>
             <div class="col-md-4 col-sm-6 brands-div services text-center"> <span class="icon icon-recycle"></span>
                 <div class="services-content">
-                    <a href="products.php?BId=<?php echo $x+1; ?>" class="work-box">
+                    <a href="viewProduct.php?BId=<?php echo $x+1; ?>" class="work-box">
                         <img style="height: 300px; width: 300px;" src="images/brands/<?php echo $brandImgID[$x]?>" alt="">
                     </a>
                     <h3 style="color: white"><?php echo $brandName[$x]?></h3>

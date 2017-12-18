@@ -5,6 +5,7 @@
  * Date: 12/6/2017
  * Time: 6:37 PM
  */
+//$_SESSION['shoppingCart']=isset($_SESSION['shoppingCart']) ? $_SESSION['shoppingCart'] : array()
 ?>
 <!doctype html>
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""><![endif]-->

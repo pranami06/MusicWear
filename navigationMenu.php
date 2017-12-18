@@ -5,8 +5,11 @@
  * Date: 12/6/2017
  * Time: 6:42 PM
  */
-$_SESSION['shoppingCart']['count'] = "";
-$cartItems = $_SESSION['shoppingCart']['count'];
+//$_SESSION['shoppingCart']['count'] = "";
+require_once ("config.php");
+$cartItems = $_SESSION;
+print sizeof($cartItems);
+//$cartItems = 1;
 ?>
 <!-- header section -->
 <section>
@@ -27,7 +30,7 @@ $cartItems = $_SESSION['shoppingCart']['count'];
                             </ul>
                         </li>
                         <li><a href="viewCart.php">
-                                <span class="glyphicon glyphicon-shopping-cart badge"><?php echo $cartItems?> Cart
+                                <span class="glyphicon glyphicon-shopping-cart badge"><?php echo sizeof($cartItems)?> Cart
                                     <span class="badge"></span>
                                 </span>
                             </a>
@@ -35,7 +38,7 @@ $cartItems = $_SESSION['shoppingCart']['count'];
                     <?php }else{?>
                         <li><a href="login.php">Login</a></li>
                         <li><a href="viewCart.php">
-                                <span class="glyphicon glyphicon-shopping-cart badge"><?php echo $cartItems?> Cart
+                                <span class="glyphicon glyphicon-shopping-cart badge"><?php echo sizeof($cartItems)?> Cart
                                     <span class="badge"></span>
                                 </span>
                             </a>
