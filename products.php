@@ -31,6 +31,21 @@ foreach ($products as $product){
   $PIDs[] = $product['PID'];
   $BrandNames[] = $product['BName'];
 }
+
+//Form posted
+if(!empty($_POST)) {
+    $errors = array();
+    if (isset($_POST["pId"])) {
+        print "Form posted";
+        $product_id = $_POST['pID'];
+        $product_qty = 1;
+        addToCart($product_id, $product_qty);
+        header("location:products.php");
+    } else {
+        $errors[] = "Please enter valid quantity";
+    }
+}
+
 ?>
 <body>
 <?php
@@ -41,24 +56,25 @@ require_once("navigationMenu.php");
         <div class="section-header">
             <h2 class="wow fadeInDown animated">Our Products</h2>
         </div>
-        <div class="row no-gutter">
-            <?php for($x = 0; $x<sizeof($PIDs); $x++){?>
-                <div class="jumbotron col-lg-3 col-md-6 col-sm-6 products-div work">
-                    <a href="viewProduct.php?PID=<?php echo $PIDs[$x]?>" class="work-box">
-                        <img src="images/product_images/<?php echo $BrandNames[$x]?>/<?php echo $PImages[$x]?>" alt="">
-                        <div class="overlay">
-                            <div class="overlay-caption">
-                                <p><span class="icon icon-magnifying-glass"></span></p>
-                            </div>
-                        </div><!-- overlay -->
-                    </a>
-                    <h4 class="products-name"><?php echo $PNames[$x]?></h4>
-                    <h6 class="products-price">Price : $<?php echo $PPrices[$x]?></h6>
-                </div>
-            <?php }?>
+        <form name="products" method="post" action="processAddToCart.php">
+            <div class="row no-gutter">
+                <?php for($x = 0; $x<sizeof($PIDs); $x++){?>
+                    <div class="jumbotron col-lg-3 col-md-6 col-sm-6 products-div work">
+                        <a href="products.php?BId=<?php echo $brandID?>" class="work-box">
+                            <img src="images/product_images/<?php echo $BrandNames[$x]?>/<?php echo $PImages[$x]?>" alt="">
+                        </a>
+                        <h4 class="products-name"><?php echo $PNames[$x]?></h4>
+                        <h6 class="products-price">Price : $<?php echo $PPrices[$x]?></h6>
+                        <input type="text" name="bID" value="<?php echo $brandID?>" hidden />
+                        <input type="text" name="qty" value="1" hidden />
+                        <input type="text" name="pId" value="<?php echo $PIDs[$x]?>" hidden />
+                        <button type="submit" id="submit" name="send" class="btn-primary btn-cart"> Add To Cart</button>
+                    </div>
+                <?php }?>
+            </div>
+        </form>
     </div>
 </section>
-</div>
 </body>
 <?php
 require_once ("footer.php");

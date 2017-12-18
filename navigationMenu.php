@@ -5,6 +5,8 @@
  * Date: 12/6/2017
  * Time: 6:42 PM
  */
+$_SESSION['shoppingCart']['count'] = "";
+$cartItems = $_SESSION['shoppingCart']['count'];
 ?>
 <!-- header section -->
 <section>
@@ -24,10 +26,20 @@
                                 <li style="background-color: transparent"><a href="logOut.php">Log Out</a></li>
                             </ul>
                         </li>
-                        <li><a href="#gallery">Cart</a></li>
+                        <li><a href="viewCart.php">
+                                <span class="glyphicon glyphicon-shopping-cart badge"><?php echo $cartItems?> Cart
+                                    <span class="badge"></span>
+                                </span>
+                            </a>
+                        </li>
                     <?php }else{?>
                         <li><a href="login.php">Login</a></li>
-                        <li><a href="#gallery">Cart</a></li>
+                        <li><a href="viewCart.php">
+                                <span class="glyphicon glyphicon-shopping-cart badge"><?php echo $cartItems?> Cart
+                                    <span class="badge"></span>
+                                </span>
+                            </a>
+                        </li>
                     <?php } ?>
                 </ul>
             </nav>

@@ -276,4 +276,76 @@ function fetchAllBrandImgID(){
     $stmt->close();
     return ($row);
 }
+
+//function to check if product already exists in cart
+
+function product_exists($pid){
+    $max=count($_SESSION['shoppingCart']);
+    $productExists=false;
+    for($i=0;$i<$max;$i++){
+        print "in loop";
+        if($pid==$_SESSION['shoppingCart'][$i]['product_code']){
+            $productExists=true;
+            break;
+        }
+    }
+    return $productExists;
+}
+
+function fetchThisProductDetails($prodID){
+    global $mysqli,$db_table_prefix;
+    $stmt = $mysqli->prepare("SELECT
+		PNAme,
+		PDesc,
+		PPrice
+		FROM ".$db_table_prefix."product_info
+		WHERE
+		PID = ?
+		LIMIT 1");
+    $stmt->bind_param("s", $prodID);
+    $stmt->execute();
+    $stmt->bind_result($PName, $PDesc, $PPrice);
+    $stmt -> execute();
+    while ($stmt->fetch()){
+        $row = array(
+            'PName' => $PName,
+            'PDesc' => $PDesc,
+            'PPrice' => $PPrice
+        );
+    }
+    $stmt->close();
+    return ($row);
+}
+
+//function to add products to cart
+function addToCart($pID, $prodQty){
+    print "In function";
+    if(is_array($_SESSION['shoppingCart'])){
+        if(product_exists($pID)) {
+            $prodQty = $prodQty + 1;
+        }
+        $items=count($_SESSION['shoppingCart']);
+
+        $thisproduct = fetchThisProductDetails($pID);
+        print_r($thisproduct);
+        $_SESSION['shoppingCart'][$items]['product_name']=$thisproduct['product_name'];
+        $_SESSION['shoppingCart'][$items]['product_desc']=$thisproduct['product_desc'];
+        $_SESSION['shoppingCart'][$items]['product_price']=$thisproduct['price'];
+        $_SESSION['shoppingCart'][$items]['product_code']=$pID;
+        $_SESSION['shoppingCart'][$items]['qty']=$prodQty;
+        $_SESSION['shoppingCart']['count']=$items;
+    }
+    else{
+        $_SESSION['shoppingCart'] = array();
+        $thisproduct = fetchThisProductDetails($pID);
+
+        //$_SESSION['shoppingCart'][0]['product_code']=$thisproduct['product_code'];
+        $_SESSION['shoppingCart'][0]['product_name']=$thisproduct['product_name'];
+        $_SESSION['shoppingCart'][0]['product_desc']=$thisproduct['product_desc'];
+        $_SESSION['shoppingCart'][0]['product_price']=$thisproduct['price'];
+        $_SESSION['shoppingCart'][0]['product_code']=$pID;
+        $_SESSION['shoppingCart'][0]['qty']=$prodQty;
+        $_SESSION['shoppingCart']['count'] = 1;
+    }
+}
 ?>
