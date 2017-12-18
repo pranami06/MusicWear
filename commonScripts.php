@@ -36,7 +36,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.flexslider-min.js"></script>
     <script src="js/jquery.fancybox.pack.js"></script>
-    <script src="js/retina.min.js"></script>
     <script src="js/modernizr.js"></script>
     <script src="js/main.js"></script>
     <script type="text/javascript" src="js/jquery.contact.js"></script>
