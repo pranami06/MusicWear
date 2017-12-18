@@ -54,9 +54,9 @@ require_once ("config.php");
             <h2 class="wow fadeInDown animated">Our Best selling Products</h2>
         </div>
         <div class="row no-gutter">
-            <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/product_images/beats/2.png" class="work-box"> <img src="images/product_images/beats/2.png" alt="">
-                    <h4 style="color: steelblue">Beats Studio-3</h4>
-                    <h6 style="color: red">Price - $249.00</h6>
+            <div class="col-lg-3 col-md-6 col-sm-6 products-div work"> <a href="images/product_images/beats/2.png" class="work-box"> <img src="images/product_images/beats/2.png" alt="">
+                    <h4 style="color: steelblue; font-weight: bolder">Beats Studio-3</h4>
+                    <h6 style="color: red; font-weight: bold">Price - $249.00</h6>
                     <div class="overlay">
                         <div class="overlay-caption">
                             <p><span class="icon icon-magnifying-glass"></span></p>
@@ -64,9 +64,9 @@ require_once ("config.php");
                     </div>
                     <!-- overlay -->
                 </a> </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/product_images/JBL/5.jpg" class="work-box"> <img src="images/product_images/JBL/5.jpg" alt="">
-                    <h4 style="color: steelblue">JBL E45BT</h4>
-                    <h6 style="color: red">Price - $149.00</h6>
+            <div class="col-lg-3 col-md-6 col-sm-6 products-div work"> <a href="images/product_images/JBL/5.jpg" class="work-box"> <img src="images/product_images/JBL/5.jpg" alt="">
+                    <h4 style="color: steelblue; font-weight: bolder">JBL E45BT</h4>
+                    <h6 style="color: red; font-weight: bold">Price - $149.00</h6>
                     <div class="overlay">
                         <div class="overlay-caption">
                             <p><span class="icon icon-magnifying-glass"></span></p>
@@ -74,9 +74,9 @@ require_once ("config.php");
                     </div>
                     <!-- overlay -->
                 </a> </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/product_images/Marshall/3.png" class="work-box"> <img src="images/product_images/Marshall/3.png" alt="">
-                    <h4 style="color: steelblue">Marshall monitor 2.0</h4>
-                    <h6 style="color: red">Price - $149.00</h6>
+            <div class="col-lg-3 col-md-6 col-sm-6 products-div work"> <a href="images/product_images/Marshall/3.png" class="work-box"> <img src="images/product_images/Marshall/3.png" alt="">
+                    <h4 style="color: steelblue; font-weight: bolder">Marshall monitor 2.0</h4>
+                    <h6 style="color: red; font-weight: bold">Price - $149.00</h6>
                     <div class="overlay">
                         <div class="overlay-caption">
                             <p><span class="icon icon-magnifying-glass"></span></p>
@@ -84,9 +84,9 @@ require_once ("config.php");
                     </div>
                     <!-- overlay -->
                 </a> </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/product_images/V-moda/1.jpg" class="work-box"> <img src="images/product_images/V-moda/1.jpg" alt="">
-                    <h4 style="color: steelblue">V-moda crossfade</h4>
-                    <h6 style="color: red">Price - $299.00</h6>
+            <div class="col-lg-3 col-md-6 col-sm-6 products-div work"> <a href="images/product_images/V-moda/1.jpg" class="work-box"> <img src="images/product_images/V-moda/1.jpg" alt="">
+                    <h4 style="color: steelblue; font-weight: bolder">V-moda crossfade</h4>
+                    <h6 style="color: red; font-weight: bold">Price - $299.00</h6>
                     <div class="overlay">
                         <div class="overlay-caption">
                             <p><span class="icon icon-magnifying-glass"></span></p>
@@ -94,9 +94,9 @@ require_once ("config.php");
                     </div>
                     <!-- overlay -->
                 </a> </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/product_images/V-moda/2.jpg" class="work-box"> <img src="images/product_images/V-moda/2.jpg" alt="">
-                    <h4 style="color: steelblue">V-moda Zn</h4>
-                    <h6 style="color: red">Price - $149.00</h6>
+            <div class="col-lg-3 col-md-6 col-sm-6 products-div work"> <a href="images/product_images/V-moda/2.jpg" class="work-box"> <img src="images/product_images/V-moda/2.jpg" alt="">
+                    <h4 style="color: steelblue; font-weight: bolder">V-moda Zn</h4>
+                    <h6 style="color: red; font-weight: bold">Price - $149.00</h6>
                     <div class="overlay">
                         <div class="overlay-caption">
                             <p><span class="icon icon-magnifying-glass"></span></p>
@@ -104,9 +104,9 @@ require_once ("config.php");
                     </div>
                     <!-- overlay -->
                 </a> </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/product_images/Skullcandy/3.jpg" class="work-box"> <img  src="images/product_images/Skullcandy/3.jpg" alt="">
-                    <h4 style="color: steelblue">Skullcandy Crusher</h4>
-                    <h6 style="color: red">Price - $99.00</h6>
+            <div class="col-lg-3 col-md-6 col-sm-6 products-div work"> <a href="images/product_images/Skullcandy/3.jpg" class="work-box"> <img  src="images/product_images/Skullcandy/3.jpg" alt="">
+                    <h4 style="color: steelblue; font-weight: bolder">Skullcandy Crusher</h4>
+                    <h6 style="color: red; font-weight: bold">Price - $99.00</h6>
                     <div class="overlay">
                         <div class="overlay-caption">
                             <p><span class="icon icon-magnifying-glass"></span></p>
@@ -114,9 +114,9 @@ require_once ("config.php");
                     </div>
                     <!-- overlay -->
                 </a> </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/product_images/JBL/6.jpg" class="work-box"> <img src="images/product_images/JBL/6.jpg" alt="">
-                    <h4 style="color: steelblue">JBL Reflect miniBT</h4>
-                    <h6 style="color: red">Price - $39.00</h6>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-sm-offset-3 work"> <a href="images/product_images/JBL/6.jpg" class="work-box"> <img src="images/product_images/JBL/6.jpg" alt="">
+                    <h4 style="color: steelblue; font-weight: bolder">JBL Reflect miniBT</h4>
+                    <h6 style="color: red; font-weight: bold">Price - $39.00</h6>
                     <div class="overlay">
                         <div class="overlay-caption">
                             <p><span class="icon icon-magnifying-glass"></span></p>
@@ -124,9 +124,9 @@ require_once ("config.php");
                     </div>
                     <!-- overlay -->
                 </a> </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 work"> <a href="images/product_images/Marshall/1.jpg" class="work-box"> <img src="images/product_images/Marshall/1.jpg" alt="">
-                    <h4 style="color: steelblue">Marshal ModeEQ</h4>
-                    <h6 style="color: red">Price - $79.00</h6>
+            <div class="col-lg-3 col-md-6 col-sm-6 products-div work"> <a href="images/product_images/Marshall/1.jpg" class="work-box"> <img src="images/product_images/Marshall/1.jpg" alt="">
+                    <h4 style="color: steelblue; font-weight: bolder">Marshal ModeEQ</h4>
+                    <h6 style="color: red; font-weight: bold">Price - $79.00</h6>
                     <div class="overlay">
                         <div class="overlay-caption">
                             <p><span class="icon icon-magnifying-glass"></span></p>

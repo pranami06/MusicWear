@@ -222,19 +222,23 @@ function submitMessage($name,$email,$comments){
 function fetchProductsBasedOnBID($BId){
     global $mysqli,$db_table_prefix;
     $stmt = $mysqli->prepare("SELECT
-		PID,
-		PImgID,
-		BID,
-		PName,
-		PDesc,
-		PPrice
-		FROM ".$db_table_prefix."product_info
+		p.PID,
+		p.PImgID,
+		p.BID,
+		p.PName,
+		p.PDesc,
+		p.PPrice,
+		b.BName
+		FROM ".$db_table_prefix."product_info p
+		JOIN ".$db_table_prefix."brand_info b
+		ON
+		p.BID = b.BID
 		WHERE
-		BID = ?
+		p.BID = ?
 		");
     $stmt->bind_param("i", $BId);
     $stmt->execute();
-    $stmt->bind_result($PID, $PImgID, $BID, $PName, $PDesc, $PPrice);
+    $stmt->bind_result($PID, $PImgID, $BID, $PName, $PDesc, $PPrice, $BName);
     $stmt -> execute();
     while ($stmt->fetch()){
         $row[] = array(
@@ -243,7 +247,8 @@ function fetchProductsBasedOnBID($BId){
             'BID' => $BID,
             'PName' => $PName,
             'PDesc' => $PDesc,
-            'PPrice' => $PPrice
+            'PPrice' => $PPrice,
+            'BName' => $BName
         );
     }
     $stmt->close();
@@ -256,14 +261,16 @@ function fetchAllBrandImgID(){
     global $mysqli, $db_table_prefix;
     $stmt = $mysqli->prepare(
         "SELECT
-		BImgID
+		BImgID,
+		BName
 		FROM " . $db_table_prefix . "brand_info"
     );
     $stmt->execute();
-    $stmt->bind_result($BImgID);
+    $stmt->bind_result($BImgID, $BName);
     while ($stmt->fetch()){
         $row[] = array(
             'BImgID' => $BImgID,
+            'BName' => $BName
         );
     }
     $stmt->close();

@@ -982,16 +982,22 @@ color:#404040;
 .dropdown-menu:hover{
 	border-color: dimgray;
 }
+.brands-div{
+	margin-left: 150px;
+}
+.products-div{
+	margin-left: 80px;
+}
 .products-name{
+	margin-top: 40px;
 	color: steelblue;
 	text-align: center;
 	font-weight: bolder;
-}
-.products-div{
-	margin-left: 40px;
 }
 .products-price{
 	color: indianred;
 	text-align: center;
 	font-weight: bold;
+	font-size: medium;
+	margin-bottom: -25px;
 }
