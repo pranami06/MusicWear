@@ -1001,3 +1001,31 @@ color:#404040;
 	font-size: medium;
 	margin-bottom: -25px;
 }
+.product-image{
+	margin-left: 200px;
+	height: 300px;
+	width: 300px;
+	margin-top: 50px;
+}
+.product-detail{
+	margin-top: 50px;
+}
+.btn-kart{
+	margin-top: 20px;
+	margin-left: 100px;
+}
+.qty-btn{
+	margin-left: 20px;
+	height:25px;
+	width: 60px;
+}
+.viewproduct-price{
+	margin-left: -400px;
+	color: red;
+}
+.viewproduct-divider{
+	display: block;
+	margin-left: 70px;
+	margin-right: 50px;
+	opacity: .4;
+}
