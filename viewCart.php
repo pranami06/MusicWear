@@ -7,8 +7,12 @@
  */
 require_once ("config.php");
 require_once ("commonScripts.php");
-if(isset($_GET['clear'])){
+    if(isset($_GET['clear'])){
     unset($_SESSION['cart']);
+    if(isUserLoggedIn()){
+        deleteFromDbAfterLoginAtClearCart($loggedInUser->user_name);
+    }
+
 }
 if(isset($_SESSION['cart'])){
     $checkOut = $_SESSION['cart'];
@@ -65,9 +69,16 @@ $i= $total = $current_total = 0;
                 <a href="index.php">
                     <button id="continueShopping" name="continueShopping" class="btn-info">Continue Shopping</button>
                 </a>
-                <a href="checkout.php">
-                    <button id="proceedCheckout" name="proceedCheckout" class="btn-success">Checkout</button>
-                </a>
+                <?php if(isUserLoggedIn()){?>
+                    <a href="Billinginfo.php">
+                        <button id="proceedCheckout" name="proceedCheckout" class="btn-success">Checkout</button>
+                    </a>
+                <?php } else{?>
+                    <a href="createAccount.php">
+                        <button id="proceedCheckout" name="proceedCheckout" class="btn-success">Checkout</button>
+                    </a>
+                <?php }?>
+
             </div>
         </div>
     </div>
