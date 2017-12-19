@@ -21,12 +21,12 @@ if(!empty($_POST)) {
 <?php
 require_once("navigationMenu.php");
 ?>
-<!-- contact section -->
+<!-- contact section -->e
 <section id="contact" class="section">
     <div class="container">
         <div class="section-header">
             <h1 style="color: steelblue" class="wow fadeInDown animated">Contact Us</h1>
-            <p class="wow fadeInDown animated">For any suggestions or feedback please leave us a message</p>
+            <p class="wow fadeInDown animatd">For any suggestions or feedback please leave us a message</p>
         </div>
             <div class="col-md-10 col-md-offset-1">
                 <?php
