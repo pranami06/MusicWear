@@ -281,6 +281,7 @@ function fetchAllBrandImgID(){
 
 function fetchThisProductDetails($prodID){
     global $mysqli,$db_table_prefix;
+
     $stmt = $mysqli->prepare("SELECT
 		PName,
 		PDesc,
@@ -310,12 +311,13 @@ function updateProductQuantity($pID){
 
 //function to add products to cart
 function addToCart($pID, $prodQty){
-    print "In function";
-
+    global $loggedInUser,$mysqli,$db_table_prefix;
     if(isset($_SESSION['cart'][$pID])){
         $_SESSION['cart'][$pID]['qty']=$_SESSION['cart'][$pID]['qty']+$prodQty;
+
     }
     else{
+
         $thisproduct = fetchThisProductDetails($pID);
 
         $_SESSION['cart'][$pID]['product_name']=$thisproduct['PName'];
@@ -323,7 +325,12 @@ function addToCart($pID, $prodQty){
         $_SESSION['cart'][$pID]['product_price']=$thisproduct['PPrice'];
         $_SESSION['cart'][$pID]['product_code']=$pID;
         $_SESSION['cart'][$pID]['qty']=$prodQty;
+        if(isset($_SESSION["ThisUser"])){
+            insertToDB($loggedInUser->user_name,$_SESSION['cart'][$pID]);
+
+        }
     }
+    /* insert queries for logged in user do insert only afterwards check for previously inserted any value then update */
 }
 
 //function to check if product already exists in cart
@@ -345,4 +352,102 @@ function no_of_products(){
     }
     return $max;
 }
+
+function insertDatabaseToSession($userName){
+    /*Db query fetch all information from cart table for this userName*/
+    global $mysqli,$db_table_prefix;
+    $stmt = $mysqli->prepare("SELECT
+		PID,
+		PName
+		PDesc,
+		PPrice,
+		PQuantity
+		FROM ".$db_table_prefix."user_cart
+		WHERE
+		UID = ?
+		");
+
+    $stmt->bind_param("s", $userName);
+    $stmt->execute();
+    $stmt->bind_result($PID, $PName, $PDesc, $PPrice, $PQuantity);
+    $stmt -> execute();
+    while ($stmt->fetch()){
+        addToSessionAfterLogin($PID,$PName, $PDesc, $PPrice, $PQuantity);
+    }
+    $stmt->close();
+    /*
+     * for Loop
+     * Insert to session variable by the following function
+     * addToCart($pID, $prodQty)
+     *
+
+    */
+    return 0;
+}
+function addToSessionAfterLogin($pID, $PName,$PDesc,$PPrice,$qty) {
+    if(isset($_SESSION['cart'][$pID])){
+        $_SESSION['cart'][$pID]['qty']=$_SESSION['cart'][$pID]['qty']+$qty;
+
+    }
+    else{
+
+
+        $_SESSION['cart'][$pID]['product_name']=$PName;
+        $_SESSION['cart'][$pID]['product_desc']=$PDesc;
+        $_SESSION['cart'][$pID]['product_price']=$PPrice;
+        $_SESSION['cart'][$pID]['product_code']=$pID;
+        $_SESSION['cart'][$pID]['qty']=$qty;
+
+    }
+}
+
+function sessionToDatabase($userName) {
+    /*
+     * First delete all rows for selected user */
+    //return 0;
+    global $mysqli,$db_table_prefix;
+    $stmt = $mysqli->prepare("DELETE FROM ".$db_table_prefix."user_cart
+		WHERE
+		UID = ?
+		");
+    $stmt->bind_param("s", $userName);
+    $stmt->execute();
+    $stmt->close();
+    foreach ($_SESSION['cart'] as $key=> $value){
+        var_dump($value);
+        insertToDB($userName, $value);
+    }
+    die;
+
+    /* now for or foreach $_SESSION['cart'] values add to database user cart*/
+}
+function insertToDB($userName,$product_array){
+    global $mysqli,$db_table_prefix;
+
+    $stmt = $mysqli->prepare(
+        "INSERT INTO " . $db_table_prefix . "user_cart (
+		PID,
+		UID,
+		PName,
+		PDesc,
+		PPrice,
+		PQuantity
+		)
+		VALUES (
+		?,
+		?,
+		?,
+		?,
+		?,
+		?
+		)"
+    );
+    $stmt->bind_param("ssssii", $product_array['product_code'], $userName, $product_array['product_name'],
+        $product_array['product_desc'], $product_array['product_price'], $product_array['qty']);
+    $stmt->execute();
+    var_dump($stmt);
+    var_dump($mysqli);
+    $stmt->close();
+}
+
 ?>
