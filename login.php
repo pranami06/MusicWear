@@ -43,8 +43,8 @@ if(!empty($_POST))
                 //unset($_SESSION['cart']);
                 //if(isset($_SESSION['cart'])) {
                     insertDatabaseToSession($userdetails['UserName']);
-                    var_dump($_SESSION);
-                  //  sessionToDatabase($userdetails['UserName']);
+                    //var_dump($_SESSION);die;
+                   sessionToDatabase($userdetails['UserName']);
                 //}//Passwords match! we're good to go'
                 //Transfer some db data to the session object
                 $loggedInUser->email = $userdetails["Email"];
