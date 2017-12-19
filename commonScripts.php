@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: jhawa
- * Date: 12/6/2017
- * Time: 6:37 PM
- */
 //$_SESSION['shoppingCart']=isset($_SESSION['shoppingCart']) ? $_SESSION['shoppingCart'] : array()
 ?>
 <!doctype html>

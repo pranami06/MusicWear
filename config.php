@@ -18,7 +18,6 @@ require_once("functions.php"); // database and other functions are written in th
 
 session_start();
 
-
 //loggedInUser can be used globally if constructed
 if(isset($_SESSION["ThisUser"]) && is_object($_SESSION["ThisUser"]))
 {

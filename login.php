@@ -5,8 +5,8 @@
  * Date: 12/10/2017
  * Time: 1:15 AM
  */
-require_once ("commonScripts.php");
 require_once ("config.php");
+require_once ("commonScripts.php");
 //Prevent the user visiting the logged in page if he/she is already logged in
 if(isUserLoggedIn()) {
     header("Location: index.php"); die();
@@ -38,7 +38,14 @@ if(!empty($_POST))
             }
             else
             {
-                //Passwords match! we're good to go'
+
+                /*Create a function to transfer information from $_SESSION to database for cart data present without login*/
+                //unset($_SESSION['cart']);
+                //if(isset($_SESSION['cart'])) {
+                    insertDatabaseToSession($userdetails['UserName']);
+                    var_dump($_SESSION);
+                  //  sessionToDatabase($userdetails['UserName']);
+                //}//Passwords match! we're good to go'
                 //Transfer some db data to the session object
                 $loggedInUser->email = $userdetails["Email"];
                 $loggedInUser->hash_pw = $userdetails["Password"];
