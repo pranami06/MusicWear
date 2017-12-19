@@ -21,7 +21,7 @@ if(!empty($_POST)) {
 <?php
 require_once("navigationMenu.php");
 ?>
-<!-- contact section -->e
+<!-- contact section -->
 <section id="contact" class="section">
     <div class="container">
         <div class="section-header">
