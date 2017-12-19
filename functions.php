@@ -305,9 +305,6 @@ function fetchThisProductDetails($prodID){
     return ($row);
 }
 
-function updateProductQuantity($pID){
-
-}
 
 //function to add products to cart
 function addToCart($pID, $prodQty){
@@ -454,15 +451,16 @@ function deleteFromDbAfterLoginAtClearCart($userName){
     $stmt->close();
 }
 
-function addBillingInfo($username, $FName, $LName, $Street, $City, $Zip, $Country){
+function addBillingInfo($username, $FName, $LName, $Street, $City, $State, $Zip, $Country){
     global $mysqli,$db_table_prefix;
-
     $stmt = $mysqli->prepare(
         "INSERT INTO " . $db_table_prefix . "billing_address_info (	  
+		UID,
 		FName,
 		LName,
 		Street,
 		City,
+		State,
 		Zip,
 		Country
 		)
@@ -472,14 +470,16 @@ function addBillingInfo($username, $FName, $LName, $Street, $City, $Zip, $Countr
 		?,
 		?,
 		?,
-		?,		
-		WHERE
-		UID = ?
+		?,
+		?,
+		?		
 		)"
     );
-    $stmt->bind_param("sssssis" ,$FName, $LName, $Street, $City, $Zip, $Country, $username);
-    $stmt->execute();;
+    $stmt->bind_param("ssssssis", $username, $FName, $LName, $Street, $City, $State, $Zip, $Country);
+    $result = $stmt->execute();
     $stmt->close();
+    return $result;
+
 }
 
 function updateQtyInDbFromSession($userName, $pID, $pQty){

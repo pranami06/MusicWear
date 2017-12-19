@@ -17,15 +17,17 @@ if(!empty($_POST)){
     $LName = trim($_POST["lName"]);
     $Street = trim($_POST["street"]);
     $City = trim($_POST["city"]);
-    $Country = trim($_POST["zip"]);
-    $Zip = trim($_POST["country"]);
+    $State = trim($_POST["state"]);
+    $Country = trim($_POST["country"]);
+    $Zip = trim($_POST["zip"]);
 
-    $billingDetails = addBillingInfo($username, $FName, $LName, $Street, $City, $Zip, $Country);
-    if($billingDetails <> 1){
+    $billingDetails = addBillingInfo($username, $FName, $LName, $Street, $City, $State, $Zip, $Country);
+    if($billingDetails != 1){
         $error_register = 1;
     }
     else{
-        header("payment.php"); die();
+
+        header("location: paymentinfo.php"); die();
     }
 }
 ?>
@@ -46,6 +48,7 @@ require_once("navigationMenu.php");
                     <input name="lName" id="Lname" type="text" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="Your Last name" required >
                     <input name="street" id="street" type="text" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="Street" required >
                     <input name="city" id="city" type="text" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="City" required >
+                    <input name="state" id="state" type="text" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="State" required >
                     <input name="zip" id="Zip" type="text" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="Zip" required >
                     <input name="country" id="Country" type="text" class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 noMarr" placeholder="Country" required >
                     <button type="submit" id="submit" name="send" class="submitBnt">Continue to checkout</button>
