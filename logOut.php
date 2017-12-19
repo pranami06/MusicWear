@@ -7,7 +7,7 @@ require_once("config.php");
 if(isUserLoggedIn())
 {
     destroySession("ThisUser");
-    //destroySession("shoppingCart");
+    destroySession("cart");
 }
 
 header("Location:index.php");
