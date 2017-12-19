@@ -35,6 +35,7 @@
         </div>
     </div>
 </footer>
+<div id="particles-js" hidden></div>
 <!-- Footer section -->
 </body>
 </html>

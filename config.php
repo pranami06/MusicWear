@@ -25,8 +25,4 @@ if(isset($_SESSION["ThisUser"]) && is_object($_SESSION["ThisUser"]))
     $loggedInUser = $_SESSION["ThisUser"];
 }
 
-echo "SESSION VARIABLES ";
-echo "<pre>";
-print_r($_SESSION);
-echo "</pre>";
 ?>

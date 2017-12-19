@@ -311,49 +311,38 @@ function updateProductQuantity($pID){
 //function to add products to cart
 function addToCart($pID, $prodQty){
     print "In function";
-    //print "this is ". (!is_array($_SESSION['shoppingCart']);
 
-    if(is_array($_SESSION['cart'])){
-        print "Inside session exist";
-        if(product_exists($pID)) return;
-        print "after prod";
-        $max=count($_SESSION['cart']);
-        print $max;
-        $thisproduct = fetchThisProductDetails($pID);
-        //$_SESSION['shoppingCart'][$max]['product_code']=$thisproduct['product_code'];
-        $_SESSION['cart'][$max]['product_name']=$thisproduct['PName'];
-        $_SESSION['cart'][$max]['product_desc']=$thisproduct['PDesc'];
-        $_SESSION['cart'][$max]['product_price']=$thisproduct['PPrice'];
-        $_SESSION['cart'][$max]['product_code']=$pID;
-        $_SESSION['cart'][$max]['qty']=$prodQty;
-        $_SESSION['cart'][$max]['count'] = $max;
+    if(isset($_SESSION['cart'][$pID])){
+        $_SESSION['cart'][$pID]['qty']=$_SESSION['cart'][$pID]['qty']+$prodQty;
     }
     else{
-        $_SESSION['cart'] = array();
         $thisproduct = fetchThisProductDetails($pID);
 
-        //$_SESSION['shoppingCart'][0]['product_code']=$thisproduct['product_code'];
-        $_SESSION['cart'][0]['product_name']=$thisproduct['PName'];
-        $_SESSION['cart'][0]['product_desc']=$thisproduct['PDesc'];
-        $_SESSION['cart'][0]['product_price']=$thisproduct['PPrice'];
-        $_SESSION['cart'][0]['product_code']=$pID;
-        $_SESSION['cart'][0]['qty']=$prodQty;
+        $_SESSION['cart'][$pID]['product_name']=$thisproduct['PName'];
+        $_SESSION['cart'][$pID]['product_desc']=$thisproduct['PDesc'];
+        $_SESSION['cart'][$pID]['product_price']=$thisproduct['PPrice'];
+        $_SESSION['cart'][$pID]['product_code']=$pID;
+        $_SESSION['cart'][$pID]['qty']=$prodQty;
     }
 }
 
 //function to check if product already exists in cart
 
 function product_exists($pid){
-    $max=count($_SESSION['cart']);
-    $productExists=0;
-    for($i=0;$i<$max;$i++){
-        print "in loop";
-        if($pid==$_SESSION['cart'][$i]['product_code']){
-            $productExists=1;
-            break;
-        }
+
+    if(isset($_SESSION['cart'][$pid])){
+        return 1;
     }
-    print "<br>".$productExists;
-    return $productExists;
+    else {
+        return 0;
+    }
+}
+
+function no_of_products(){
+    $max = 0;
+    if(isset($_SESSION['cart'])){
+        $max=count($_SESSION['cart']);
+    }
+    return $max;
 }
 ?>

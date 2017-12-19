@@ -7,8 +7,6 @@
  */
 require_once ("commonScripts.php");
 require_once ("config.php");
-print_r($_SESSION);
-echo "<br>";
 //collecting BrandID
 $brandID = $_GET["BId"];
 
@@ -59,10 +57,10 @@ require_once("navigationMenu.php");
                             <h4 class="viewproduct-price">Price : $<?php echo $PPrices[$x]?></h4>
                             <hr class="viewproduct-divider">
                             <br>
-                            <h4> QTY: <input type="number" name="qty" class="qty-btn"></h4>
-                            <input type="text" name="bID" value="<?php echo $brandID?>" hidden />
+                            <h4> QTY: <input type="number" id="qty<?php echo $PIDs[$x]?>" value="1" name="qty" class="qty-btn"></h4>
+                            <input type="text" name="bID" id="bID" value="<?php echo $brandID?>" hidden />
                             <input type="text" name="pId" value="<?php echo $PIDs[$x]?>" hidden />
-                            <a type="submit" href="processAddToCart.php?pId=<?php echo $PIDs[$x]?>" class="btn-primary btn-kart">Add To Cart</a>
+                            <a type="submit" href="#" onclick="addToCart('<?php echo $PIDs[$x]?>','<?php echo $brandID?>');" class="btn-primary btn-kart">Add To Cart</a>
                         </div>
                     </div>
                 <?php }?>
@@ -70,6 +68,19 @@ require_once("navigationMenu.php");
         </div>
     </div>
 </section>
+<script>
+    function addToCart(pID,bID) {
+        var qty = $("#qty"+pID).val();
+        if(qty>0){
+            var url = "processAddToCart.php?pId="+pID+"&qty="+qty+"&bID="+bID;
+            window.location.href = url;
+        }
+        else {
+            alert("Please enter a valid quantity");
+        }
+
+    }
+</script>
 <!-- Product section -->
 <?php
 require_once ("footer.php");

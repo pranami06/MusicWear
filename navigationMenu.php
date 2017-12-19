@@ -7,8 +7,7 @@
  */
 //$_SESSION['shoppingCart']['count'] = "";
 require_once ("config.php");
-$cartItems = $_SESSION;
-print sizeof($cartItems);
+$cartItems = no_of_products();
 //$cartItems = 1;
 ?>
 <!-- header section -->
@@ -30,7 +29,7 @@ print sizeof($cartItems);
                             </ul>
                         </li>
                         <li><a href="viewCart.php">
-                                <span class="glyphicon glyphicon-shopping-cart badge"><?php echo sizeof($cartItems)?> Cart
+                                <span class="glyphicon glyphicon-shopping-cart badge"><?php echo $cartItems?> Cart
                                     <span class="badge"></span>
                                 </span>
                             </a>
@@ -38,7 +37,7 @@ print sizeof($cartItems);
                     <?php }else{?>
                         <li><a href="login.php">Login</a></li>
                         <li><a href="viewCart.php">
-                                <span class="glyphicon glyphicon-shopping-cart badge"><?php echo sizeof($cartItems)?> Cart
+                                <span class="glyphicon glyphicon-shopping-cart badge"><?php echo $cartItems?> Cart
                                     <span class="badge"></span>
                                 </span>
                             </a>
@@ -51,4 +50,5 @@ print sizeof($cartItems);
     </header>
 </section>
 <!-- header section -->
+
 
