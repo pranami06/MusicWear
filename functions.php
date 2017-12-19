@@ -277,25 +277,12 @@ function fetchAllBrandImgID(){
     return ($row);
 }
 
-//function to check if product already exists in cart
 
-function product_exists($pid){
-    $max=count($_SESSION['shoppingCart']);
-    $productExists=false;
-    for($i=0;$i<$max;$i++){
-        print "in loop";
-        if($pid==$_SESSION['shoppingCart'][$i]['product_code']){
-            $productExists=true;
-            break;
-        }
-    }
-    return $productExists;
-}
 
 function fetchThisProductDetails($prodID){
     global $mysqli,$db_table_prefix;
     $stmt = $mysqli->prepare("SELECT
-		PNAme,
+		PName,
 		PDesc,
 		PPrice
 		FROM ".$db_table_prefix."product_info
@@ -317,35 +304,45 @@ function fetchThisProductDetails($prodID){
     return ($row);
 }
 
+function updateProductQuantity($pID){
+
+}
+
 //function to add products to cart
 function addToCart($pID, $prodQty){
     print "In function";
-    if(is_array($_SESSION['shoppingCart'])){
-        if(product_exists($pID)) {
-            $prodQty = $prodQty + 1;
-        }
-        $items=count($_SESSION['shoppingCart']);
 
-        $thisproduct = fetchThisProductDetails($pID);
-        print_r($thisproduct);
-        $_SESSION['shoppingCart'][$items]['product_name']=$thisproduct['product_name'];
-        $_SESSION['shoppingCart'][$items]['product_desc']=$thisproduct['product_desc'];
-        $_SESSION['shoppingCart'][$items]['product_price']=$thisproduct['price'];
-        $_SESSION['shoppingCart'][$items]['product_code']=$pID;
-        $_SESSION['shoppingCart'][$items]['qty']=$prodQty;
-        $_SESSION['shoppingCart']['count']=$items;
+    if(isset($_SESSION['cart'][$pID])){
+        $_SESSION['cart'][$pID]['qty']=$_SESSION['cart'][$pID]['qty']+$prodQty;
     }
     else{
-        $_SESSION['shoppingCart'] = array();
         $thisproduct = fetchThisProductDetails($pID);
 
-        //$_SESSION['shoppingCart'][0]['product_code']=$thisproduct['product_code'];
-        $_SESSION['shoppingCart'][0]['product_name']=$thisproduct['product_name'];
-        $_SESSION['shoppingCart'][0]['product_desc']=$thisproduct['product_desc'];
-        $_SESSION['shoppingCart'][0]['product_price']=$thisproduct['price'];
-        $_SESSION['shoppingCart'][0]['product_code']=$pID;
-        $_SESSION['shoppingCart'][0]['qty']=$prodQty;
-        $_SESSION['shoppingCart']['count'] = 1;
+        $_SESSION['cart'][$pID]['product_name']=$thisproduct['PName'];
+        $_SESSION['cart'][$pID]['product_desc']=$thisproduct['PDesc'];
+        $_SESSION['cart'][$pID]['product_price']=$thisproduct['PPrice'];
+        $_SESSION['cart'][$pID]['product_code']=$pID;
+        $_SESSION['cart'][$pID]['qty']=$prodQty;
     }
+}
+
+//function to check if product already exists in cart
+
+function product_exists($pid){
+
+    if(isset($_SESSION['cart'][$pid])){
+        return 1;
+    }
+    else {
+        return 0;
+    }
+}
+
+function no_of_products(){
+    $max = 0;
+    if(isset($_SESSION['cart'])){
+        $max=count($_SESSION['cart']);
+    }
+    return $max;
 }
 ?>

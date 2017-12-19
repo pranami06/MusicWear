@@ -5,8 +5,10 @@
  * Date: 12/6/2017
  * Time: 6:42 PM
  */
-$_SESSION['shoppingCart']['count'] = "";
-$cartItems = $_SESSION['shoppingCart']['count'];
+//$_SESSION['shoppingCart']['count'] = "";
+require_once ("config.php");
+$cartItems = no_of_products();
+//$cartItems = 1;
 ?>
 <!-- header section -->
 <section>
@@ -48,4 +50,5 @@ $cartItems = $_SESSION['shoppingCart']['count'];
     </header>
 </section>
 <!-- header section -->
+
 
