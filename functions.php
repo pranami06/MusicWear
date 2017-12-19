@@ -314,10 +314,12 @@ function addToCart($pID, $prodQty){
     global $loggedInUser,$mysqli,$db_table_prefix;
     if(isset($_SESSION['cart'][$pID])){
         $_SESSION['cart'][$pID]['qty']=$_SESSION['cart'][$pID]['qty']+$prodQty;
-
+        if(isUserLoggedIn()){
+            /*update the quantity in database too*/
+            updateQtyInDbFromSession($loggedInUser->user_name,$pID,$_SESSION['cart'][$pID]['qty'] );
+        }
     }
     else{
-
         $thisproduct = fetchThisProductDetails($pID);
 
         $_SESSION['cart'][$pID]['product_name']=$thisproduct['PName'];
@@ -325,8 +327,8 @@ function addToCart($pID, $prodQty){
         $_SESSION['cart'][$pID]['product_price']=$thisproduct['PPrice'];
         $_SESSION['cart'][$pID]['product_code']=$pID;
         $_SESSION['cart'][$pID]['qty']=$prodQty;
-        if(isset($_SESSION["ThisUser"])){
-            insertToDB($loggedInUser->user_name,$_SESSION['cart'][$pID]);
+        if(isUserLoggedIn()){
+           insertToDB($loggedInUser->user_name,$_SESSION['cart'][$pID]);
 
         }
     }
@@ -358,7 +360,7 @@ function insertDatabaseToSession($userName){
     global $mysqli,$db_table_prefix;
     $stmt = $mysqli->prepare("SELECT
 		PID,
-		PName
+		PName,
 		PDesc,
 		PPrice,
 		PQuantity
@@ -366,13 +368,16 @@ function insertDatabaseToSession($userName){
 		WHERE
 		UID = ?
 		");
-
-    $stmt->bind_param("s", $userName);
+    $stmt->bind_param("s",$userName);
     $stmt->execute();
     $stmt->bind_result($PID, $PName, $PDesc, $PPrice, $PQuantity);
     $stmt -> execute();
+    //var_dump($stmt);
+    //var_dump($mysqli);
+    //die;
     while ($stmt->fetch()){
         addToSessionAfterLogin($PID,$PName, $PDesc, $PPrice, $PQuantity);
+        //die;
     }
     $stmt->close();
     /*
@@ -391,33 +396,23 @@ function addToSessionAfterLogin($pID, $PName,$PDesc,$PPrice,$qty) {
     }
     else{
 
-
         $_SESSION['cart'][$pID]['product_name']=$PName;
         $_SESSION['cart'][$pID]['product_desc']=$PDesc;
         $_SESSION['cart'][$pID]['product_price']=$PPrice;
         $_SESSION['cart'][$pID]['product_code']=$pID;
         $_SESSION['cart'][$pID]['qty']=$qty;
-
     }
 }
+
 
 function sessionToDatabase($userName) {
     /*
      * First delete all rows for selected user */
     //return 0;
-    global $mysqli,$db_table_prefix;
-    $stmt = $mysqli->prepare("DELETE FROM ".$db_table_prefix."user_cart
-		WHERE
-		UID = ?
-		");
-    $stmt->bind_param("s", $userName);
-    $stmt->execute();
-    $stmt->close();
+    deleteFromDbAfterLoginAtClearCart($userName);
     foreach ($_SESSION['cart'] as $key=> $value){
-        var_dump($value);
         insertToDB($userName, $value);
     }
-    die;
 
     /* now for or foreach $_SESSION['cart'] values add to database user cart*/
 }
@@ -445,9 +440,64 @@ function insertToDB($userName,$product_array){
     $stmt->bind_param("ssssii", $product_array['product_code'], $userName, $product_array['product_name'],
         $product_array['product_desc'], $product_array['product_price'], $product_array['qty']);
     $stmt->execute();
-    var_dump($stmt);
-    var_dump($mysqli);
     $stmt->close();
+}
+
+function deleteFromDbAfterLoginAtClearCart($userName){
+    global $mysqli,$db_table_prefix;
+    $stmt = $mysqli->prepare("DELETE FROM ".$db_table_prefix."user_cart
+		WHERE
+		UID = ?
+		");
+    $stmt->bind_param("s", $userName);
+    $stmt->execute();
+    $stmt->close();
+}
+
+function addBillingInfo($username, $FName, $LName, $Street, $City, $Zip, $Country){
+    global $mysqli,$db_table_prefix;
+
+    $stmt = $mysqli->prepare(
+        "INSERT INTO " . $db_table_prefix . "billing_address_info (	  
+		FName,
+		LName,
+		Street,
+		City,
+		Zip,
+		Country
+		)
+		VALUES (
+		?,
+		?,
+		?,
+		?,
+		?,
+		?,		
+		WHERE
+		UID = ?
+		)"
+    );
+    $stmt->bind_param("sssssis" ,$FName, $LName, $Street, $City, $Zip, $Country, $username);
+    $stmt->execute();;
+    $stmt->close();
+}
+
+function updateQtyInDbFromSession($userName, $pID, $pQty){
+    global $mysqli,$db_table_prefix;
+    $stmt = $mysqli->prepare(
+        "UPDATE " . $db_table_prefix . "user_cart 
+         SET 
+         PQuantity = ?
+         WHERE 
+         PID = ?
+         AND 
+         UID = ?
+         LIMIT 1"
+    );
+    $stmt->bind_param("sss", $pQty, $pID, $userName);
+    $result = $stmt->execute();
+    $stmt->close();
+    return $result;
 }
 
 ?>
