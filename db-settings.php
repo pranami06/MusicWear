@@ -10,7 +10,7 @@
 $db_host = "localhost";
 $db_name = "headphonesdb"; //Name of Database
 $db_user = "root"; //Name of database user
-$db_pass = ""; //Password for database user
+$db_pass = "root"; //Password for database user
 $db_table_prefix = ""; // if the table prefix exists use this variable as a global
 
 

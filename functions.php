@@ -277,8 +277,7 @@ function fetchAllBrandImgID(){
     return ($row);
 }
 
-
-
+//function to fetch product details based on product id
 function fetchThisProductDetails($prodID){
     global $mysqli,$db_table_prefix;
 
@@ -303,10 +302,6 @@ function fetchThisProductDetails($prodID){
     }
     $stmt->close();
     return ($row);
-}
-
-function updateProductQuantity($pID){
-
 }
 
 //function to add products to cart
@@ -336,7 +331,6 @@ function addToCart($pID, $prodQty){
 }
 
 //function to check if product already exists in cart
-
 function product_exists($pid){
 
     if(isset($_SESSION['cart'][$pid])){
@@ -347,6 +341,7 @@ function product_exists($pid){
     }
 }
 
+//function to calculate no. of products in cart
 function no_of_products(){
     $max = 0;
     if(isset($_SESSION['cart'])){
@@ -355,6 +350,7 @@ function no_of_products(){
     return $max;
 }
 
+//function to insert into session from database for logged in user
 function insertDatabaseToSession($userName){
     /*Db query fetch all information from cart table for this userName*/
     global $mysqli,$db_table_prefix;
@@ -372,30 +368,19 @@ function insertDatabaseToSession($userName){
     $stmt->execute();
     $stmt->bind_result($PID, $PName, $PDesc, $PPrice, $PQuantity);
     $stmt -> execute();
-    //var_dump($stmt);
-    //var_dump($mysqli);
-    //die;
     while ($stmt->fetch()){
         addToSessionAfterLogin($PID,$PName, $PDesc, $PPrice, $PQuantity);
-        //die;
     }
     $stmt->close();
-    /*
-     * for Loop
-     * Insert to session variable by the following function
-     * addToCart($pID, $prodQty)
-     *
-
-    */
     return 0;
 }
+
+//function to add data to session when a user logged in
 function addToSessionAfterLogin($pID, $PName,$PDesc,$PPrice,$qty) {
     if(isset($_SESSION['cart'][$pID])){
         $_SESSION['cart'][$pID]['qty']=$_SESSION['cart'][$pID]['qty']+$qty;
-
     }
     else{
-
         $_SESSION['cart'][$pID]['product_name']=$PName;
         $_SESSION['cart'][$pID]['product_desc']=$PDesc;
         $_SESSION['cart'][$pID]['product_price']=$PPrice;
@@ -404,18 +389,18 @@ function addToSessionAfterLogin($pID, $PName,$PDesc,$PPrice,$qty) {
     }
 }
 
-
+// function to add session into database
 function sessionToDatabase($userName) {
     /*
      * First delete all rows for selected user */
-    //return 0;
     deleteFromDbAfterLoginAtClearCart($userName);
+    /* now for or foreach $_SESSION['cart'] values add to database user cart*/
     foreach ($_SESSION['cart'] as $key=> $value){
         insertToDB($userName, $value);
     }
-
-    /* now for or foreach $_SESSION['cart'] values add to database user cart*/
 }
+
+//function for inserting data into database
 function insertToDB($userName,$product_array){
     global $mysqli,$db_table_prefix;
 
@@ -443,6 +428,7 @@ function insertToDB($userName,$product_array){
     $stmt->close();
 }
 
+//function to delete entries from cart once cart is cleared
 function deleteFromDbAfterLoginAtClearCart($userName){
     global $mysqli,$db_table_prefix;
     $stmt = $mysqli->prepare("DELETE FROM ".$db_table_prefix."user_cart
@@ -454,15 +440,17 @@ function deleteFromDbAfterLoginAtClearCart($userName){
     $stmt->close();
 }
 
-function addBillingInfo($username, $FName, $LName, $Street, $City, $Zip, $Country){
+//function to add billing information
+function addBillingInfo($username, $FName, $LName, $Street, $City, $State, $Zip, $Country){
     global $mysqli,$db_table_prefix;
-
     $stmt = $mysqli->prepare(
         "INSERT INTO " . $db_table_prefix . "billing_address_info (	  
+		UID,
 		FName,
 		LName,
 		Street,
 		City,
+		State,
 		Zip,
 		Country
 		)
@@ -472,16 +460,19 @@ function addBillingInfo($username, $FName, $LName, $Street, $City, $Zip, $Countr
 		?,
 		?,
 		?,
-		?,		
-		WHERE
-		UID = ?
+		?,
+		?,
+		?		
 		)"
     );
-    $stmt->bind_param("sssssis" ,$FName, $LName, $Street, $City, $Zip, $Country, $username);
-    $stmt->execute();;
+    $stmt->bind_param("ssssssis", $username, $FName, $LName, $Street, $City, $State, $Zip, $Country);
+    $result = $stmt->execute();
     $stmt->close();
+    return $result;
+
 }
 
+//function to update quantity in database if any product's quantity is updated in session
 function updateQtyInDbFromSession($userName, $pID, $pQty){
     global $mysqli,$db_table_prefix;
     $stmt = $mysqli->prepare(
