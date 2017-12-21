@@ -114,7 +114,7 @@ require_once ("config.php");
 </section>
 <!-- popular products -->
 
-<!-- Testimonials section -->
+<!-- Top Deals section -->
 <section id="testimonials" class="section testimonials no-padding">
     <div class="container-fluid">
         <div class="row no-gutter">
@@ -181,7 +181,7 @@ require_once ("config.php");
         </div>
     </div>
 </section>
-<!-- Testimonials section -->
+<!-- Top Deals section -->
 <?php
 require_once ("footer.php");
 ?>

@@ -40,10 +40,9 @@ if(!empty($_POST))
             {
 
                 /*Create a function to transfer information from $_SESSION to database for cart data present without login*/
-                //unset($_SESSION['cart']);
-                //if(isset($_SESSION['cart'])) {
+                    //Insert database into session for logged in user
                     insertDatabaseToSession($userdetails['UserName']);
-                    //var_dump($_SESSION);die;
+                    //Insert Session into Database
                    sessionToDatabase($userdetails['UserName']);
                 //}//Passwords match! we're good to go'
                 //Transfer some db data to the session object
@@ -58,7 +57,7 @@ if(!empty($_POST))
                 $_SESSION["ThisUser"] = $loggedInUser;
 
                 //now that a session for this user is created
-                //Redirect to this users account page
+                //Redirect it to home page page
                 header("Location: index.php");
                 die();
             }
