@@ -51,7 +51,7 @@ require_once("navigationMenu.php");
 <div class="container">
     <div id="login-box">
         <div class="logo">
-            <img src="images/login.jpg" class="img img-responsive img-circle center-block"/>
+            <img src="images/login.png" class="img img-responsive img-circle center-block"/>
             <h1 class="logo-caption"><span class="tweak">R</span>egister</h1>
         </div><!-- /.logo -->
         <form name="registerForm" action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
