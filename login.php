@@ -80,7 +80,7 @@ require_once("navigationMenu.php");
     <form name='login' action="<?php $_SERVER['PHP_SELF']?>" method="post">
         <div id="login-box">
             <div class="logo">
-                <img src="images/login.jpg" class="img img-responsive img-circle center-block"/>
+                <img src="images/login.png" class="img img-responsive img-circle center-block"/>
                 <h1 class="logo-caption"><span class="tweak">L</span>ogin</h1>
             </div><!-- /.logo -->
             <div class="controls">
