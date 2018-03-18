@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9511e70-4214-463e-8349-211de3692dcd" name="Default" comment="image file type changed">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/bass-music-web-free-template.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -199,6 +199,11 @@
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="MusicWear" type="cbb8eebc:String" user="MusicWear" />
+              <item name=".idea" type="cbb8eebc:String" user=".idea" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="MusicWear" type="cbb8eebc:String" user="MusicWear" />
               <item name="images" type="cbb8eebc:String" user="images" />
             </path>
           </expand>
@@ -295,7 +300,7 @@
       <workItem from="1521267996914" duration="105000" />
       <workItem from="1521401139784" duration="2336000" />
       <workItem from="1521403510585" duration="81000" />
-      <workItem from="1521403755311" duration="10000" />
+      <workItem from="1521403755311" duration="164000" />
     </task>
     <task id="LOCAL-00001" summary="Music Wear initial template">
       <created>1512602864973</created>
@@ -528,11 +533,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521403566166</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="workspace.xml added">
+      <created>1521403793391</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1521403793391</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158914000" />
+    <option name="totallyTimeSpent" value="159068000" />
   </component>
   <component name="TodoView" selected-index="5">
     <todo-panel id="selected-file">
@@ -574,7 +586,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Separated header and footer sections.&#10;Added common scripts file to include all css and javascripts" />
     <MESSAGE value="Added Login and Register Pages&#10;Added Images related to Login and Register Pages&#10;Added CSS and javascript files related to Login and Register Pages" />
     <MESSAGE value="Added config, functions, logout and db-settings file.&#10;Added some changes in files related to login." />
     <MESSAGE value="Added functionality for CreateAccount and login page" />
@@ -599,7 +610,8 @@
     <MESSAGE value="added comments" />
     <MESSAGE value="new image for login picture" />
     <MESSAGE value="image file type changed" />
-    <option name="LAST_COMMIT_MESSAGE" value="image file type changed" />
+    <MESSAGE value="workspace.xml added" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
