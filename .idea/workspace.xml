@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9511e70-4214-463e-8349-211de3692dcd" name="Default" comment="" />
+    <list default="true" id="b9511e70-4214-463e-8349-211de3692dcd" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,39 +13,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="621">
               <caret line="480" column="22" lean-forward="false" selection-start-line="480" selection-start-column="22" selection-end-line="480" selection-end-column="22" />
               <folding>
-                <marker date="1513834627883" expanded="true" signature="244:364" ph="SELECT UserN... ${$db_table_prefix}" />
-                <marker date="1513834627883" expanded="true" signature="1133:1237" ph="SELECT UID, ${$db_table_prefix}" />
-                <marker date="1513834627883" expanded="true" signature="3397:3549" ph="INSERT INTO ${$db_table_prefix}user_info... " />
-                <marker date="1513834627883" expanded="true" signature="3975:4092" ph="SELECT UserN... ${$db_table_prefix}" />
-                <marker date="1513834627883" expanded="true" signature="4647:4854" ph="INSERT INTO ${$db_table_prefix}contact_us... " />
-                <marker date="1513834627883" expanded="true" signature="5148:5351" ph="SELECT p.PID... ${$db_table_prefix}" />
-                <marker date="1513834627883" expanded="true" signature="5988:6054" ph="SELECT BImgI... ${$db_table_prefix}" />
-                <marker date="1513834627883" expanded="true" signature="6467:6568" ph="SELECT PName... ${$db_table_prefix}" />
-                <marker date="1513834627883" expanded="true" signature="8604:8712" ph="SELECT PID, ${$db_table_prefix}" />
-                <marker date="1513834627883" expanded="true" signature="10082:10231" ph="INSERT INTO ${$db_table_prefix}user_cart... " />
-                <marker date="1513834627883" expanded="true" signature="10671:10730" ph="DELETE FROM ${$db_table_prefix}user_cart... " />
-                <marker date="1513834627883" expanded="true" signature="11027:11217" ph="INSERT INTO ${$db_table_prefix}billing_address_info... " />
+                <marker date="1521406033174" expanded="true" signature="244:364" ph="SELECT UserN... ${$db_table_prefix}" />
+                <marker date="1521406033174" expanded="true" signature="1133:1237" ph="SELECT UID, ${$db_table_prefix}" />
+                <marker date="1521406033174" expanded="true" signature="3397:3549" ph="INSERT INTO ${$db_table_prefix}user_info... " />
+                <marker date="1521406033174" expanded="true" signature="3975:4092" ph="SELECT UserN... ${$db_table_prefix}" />
+                <marker date="1521406033174" expanded="true" signature="4647:4854" ph="INSERT INTO ${$db_table_prefix}contact_us... " />
+                <marker date="1521406033174" expanded="true" signature="5148:5351" ph="SELECT p.PID... ${$db_table_prefix}" />
+                <marker date="1521406033174" expanded="true" signature="5988:6054" ph="SELECT BImgI... ${$db_table_prefix}" />
+                <marker date="1521406033174" expanded="true" signature="6467:6568" ph="SELECT PName... ${$db_table_prefix}" />
+                <marker date="1521406033174" expanded="true" signature="8604:8712" ph="SELECT PID, ${$db_table_prefix}" />
+                <marker date="1521406033174" expanded="true" signature="10082:10231" ph="INSERT INTO ${$db_table_prefix}user_cart... " />
+                <marker date="1521406033174" expanded="true" signature="10671:10730" ph="DELETE FROM ${$db_table_prefix}user_cart... " />
+                <marker date="1521406033174" expanded="true" signature="11027:11217" ph="INSERT INTO ${$db_table_prefix}billing_address_info... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5874">
-              <caret line="178" column="21" lean-forward="false" selection-start-line="178" selection-start-column="21" selection-end-line="178" selection-end-column="21" />
+            <state relative-caret-position="2631">
+              <caret line="105" column="62" lean-forward="false" selection-start-line="105" selection-start-column="62" selection-end-line="105" selection-end-column="62" />
               <folding>
-                <marker date="1513834627888" expanded="false" signature="5868:5884" ph="..." />
-                <marker date="1513834627888" expanded="false" signature="5937:5947" ph="..." />
-                <marker date="1513834627888" expanded="false" signature="6732:6778" ph="..." />
-                <marker date="1513834627888" expanded="false" signature="7260:7307" ph="..." />
+                <element signature="n#style#0;n#h4#0;n#a#0;n#div#0;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h6#0;n#a#0;n#div#0;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#a#0;n#div#1;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h6#0;n#a#0;n#div#1;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#a#0;n#div#2;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h6#0;n#a#0;n#div#2;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#a#0;n#div#3;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h6#0;n#a#0;n#div#3;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#a#0;n#div#4;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h6#0;n#a#0;n#div#4;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#a#0;n#div#5;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h6#0;n#a#0;n#div#5;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#a#0;n#div#6;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h6#0;n#a#0;n#div#6;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#a#0;n#div#7;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h1#1;n#blockquote#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#div#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h1#1;n#blockquote#0;n#div#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h1#1;n#blockquote#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#div#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -52,8 +72,28 @@
       <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1452">
-              <caret line="44" column="50" lean-forward="false" selection-start-line="44" selection-start-column="50" selection-end-line="44" selection-end-column="50" />
+            <state relative-caret-position="858">
+              <caret line="80" column="28" lean-forward="true" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createAccount.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/createAccount.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="627">
+              <caret line="53" column="38" lean-forward="false" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="viewProduct.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/viewProduct.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1056">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -108,7 +148,6 @@
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/ourTeam.php" />
         <option value="$PROJECT_DIR$/aboutUs.php" />
-        <option value="$PROJECT_DIR$/createAccount.php" />
         <option value="$PROJECT_DIR$/contactUs.php" />
         <option value="$PROJECT_DIR$/products.php" />
         <option value="$PROJECT_DIR$/headphones.php" />
@@ -126,9 +165,10 @@
         <option value="$PROJECT_DIR$/paymentinfo.php" />
         <option value="$PROJECT_DIR$/Billinginfo.php" />
         <option value="$PROJECT_DIR$/orderStatus.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/login.php" />
+        <option value="$PROJECT_DIR$/createAccount.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -165,6 +205,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="MusicWear" type="cbb8eebc:String" user="MusicWear" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="MusicWear" type="cbb8eebc:String" user="MusicWear" />
+              <item name=".idea" type="cbb8eebc:String" user=".idea" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -192,67 +248,11 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
-              <item name="xampp" type="cbb8eebc:String" user="xampp" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
-              <item name="xampp" type="cbb8eebc:String" user="xampp" />
-              <item name="htdocs" type="cbb8eebc:String" user="htdocs" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
-              <item name="xampp" type="cbb8eebc:String" user="xampp" />
-              <item name="htdocs" type="cbb8eebc:String" user="htdocs" />
-              <item name="IS667" type="cbb8eebc:String" user="IS667" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
-              <item name="xampp" type="cbb8eebc:String" user="xampp" />
-              <item name="htdocs" type="cbb8eebc:String" user="htdocs" />
-              <item name="IS667" type="cbb8eebc:String" user="IS667" />
-              <item name="MyBlogWithoutCSS" type="cbb8eebc:String" user="MyBlogWithoutCSS" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
-              <item name="xampp" type="cbb8eebc:String" user="xampp" />
-              <item name="htdocs" type="cbb8eebc:String" user="htdocs" />
-              <item name="IS667" type="cbb8eebc:String" user="IS667" />
-              <item name="MyBlogWithoutCSS" type="cbb8eebc:String" user="MyBlogWithoutCSS" />
-              <item name=".idea" type="cbb8eebc:String" user=".idea" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Assignment2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
@@ -309,6 +309,7 @@
       <workItem from="1513881120114" duration="2867000" />
       <workItem from="1518730574047" duration="583000" />
       <workItem from="1518731252932" duration="229000" />
+      <workItem from="1521406255175" duration="418000" />
     </task>
     <task id="LOCAL-00001" summary="Music Wear initial template">
       <created>1512602864973</created>
@@ -499,11 +500,39 @@
       <option name="project" value="LOCAL" />
       <updated>1513834475939</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="added png image files and removed some jpg files">
+      <created>1521406309831</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1521406309831</updated>
+    </task>
+    <task id="LOCAL-00029" summary="changed image path">
+      <created>1521406360890</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1521406360890</updated>
+    </task>
+    <task id="LOCAL-00030" summary="changed image path">
+      <created>1521406385850</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1521406385850</updated>
+    </task>
+    <task id="LOCAL-00031" summary="changed image path and moved content to center">
+      <created>1521406543799</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1521406543799</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156382000" />
+    <option name="totallyTimeSpent" value="156800000" />
   </component>
   <component name="TodoView" selected-index="5">
     <todo-panel id="selected-file">
@@ -516,19 +545,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="2586" height="1386" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20078126" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20078126" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.4972635" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39965695" sideWeight="0.50430024" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933104" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933104" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39965695" sideWeight="0.49569976" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32848588" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -546,8 +574,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Music Wear initial template" />
-    <MESSAGE value="Separated header and footer sections.&#10;Added common scripts file to include all css and javascripts" />
     <MESSAGE value="Added Login and Register Pages&#10;Added Images related to Login and Register Pages&#10;Added CSS and javascript files related to Login and Register Pages" />
     <MESSAGE value="Added config, functions, logout and db-settings file.&#10;Added some changes in files related to login." />
     <MESSAGE value="Added functionality for CreateAccount and login page" />
@@ -570,7 +596,10 @@
     <MESSAGE value="Order Status Page added." />
     <MESSAGE value="dbPassword changed" />
     <MESSAGE value="added comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="added comments" />
+    <MESSAGE value="added png image files and removed some jpg files" />
+    <MESSAGE value="changed image path" />
+    <MESSAGE value="changed image path and moved content to center" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed image path and moved content to center" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -656,26 +685,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/product_images/beats/1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/product_images/beats/5.jpeg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/product_images/beats/4.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/product_images/beats/3.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/images/product_images/beats/1.jpg" />
+    <entry file="file://$PROJECT_DIR$/images/product_images/beats/5.jpeg" />
+    <entry file="file://$PROJECT_DIR$/images/product_images/beats/4.jpg" />
+    <entry file="file://$PROJECT_DIR$/images/product_images/beats/3.jpg" />
     <entry file="file://$PROJECT_DIR$/ourTeam.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="791">
@@ -756,24 +769,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/createAccount.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="56" column="41" lean-forward="false" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/processAddToCart.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/viewProduct.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -820,44 +819,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="480" column="22" lean-forward="false" selection-start-line="480" selection-start-column="22" selection-end-line="480" selection-end-column="22" />
+          <folding>
+            <marker date="1521406033174" expanded="true" signature="244:364" ph="SELECT UserN... ${$db_table_prefix}" />
+            <marker date="1521406033174" expanded="true" signature="1133:1237" ph="SELECT UID, ${$db_table_prefix}" />
+            <marker date="1521406033174" expanded="true" signature="3397:3549" ph="INSERT INTO ${$db_table_prefix}user_info... " />
+            <marker date="1521406033174" expanded="true" signature="3975:4092" ph="SELECT UserN... ${$db_table_prefix}" />
+            <marker date="1521406033174" expanded="true" signature="4647:4854" ph="INSERT INTO ${$db_table_prefix}contact_us... " />
+            <marker date="1521406033174" expanded="true" signature="5148:5351" ph="SELECT p.PID... ${$db_table_prefix}" />
+            <marker date="1521406033174" expanded="true" signature="5988:6054" ph="SELECT BImgI... ${$db_table_prefix}" />
+            <marker date="1521406033174" expanded="true" signature="6467:6568" ph="SELECT PName... ${$db_table_prefix}" />
+            <marker date="1521406033174" expanded="true" signature="8604:8712" ph="SELECT PID, ${$db_table_prefix}" />
+            <marker date="1521406033174" expanded="true" signature="10082:10231" ph="INSERT INTO ${$db_table_prefix}user_cart... " />
+            <marker date="1521406033174" expanded="true" signature="10671:10730" ph="DELETE FROM ${$db_table_prefix}user_cart... " />
+            <marker date="1521406033174" expanded="true" signature="11027:11217" ph="INSERT INTO ${$db_table_prefix}billing_address_info... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1452">
-          <caret line="44" column="50" lean-forward="false" selection-start-line="44" selection-start-column="50" selection-end-line="44" selection-end-column="50" />
+        <state relative-caret-position="858">
+          <caret line="80" column="28" lean-forward="true" selection-start-line="80" selection-start-column="28" selection-end-line="80" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/createAccount.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="53" column="38" lean-forward="false" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/viewProduct.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1056">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5874">
-          <caret line="178" column="21" lean-forward="false" selection-start-line="178" selection-start-column="21" selection-end-line="178" selection-end-column="21" />
+        <state relative-caret-position="2631">
+          <caret line="105" column="62" lean-forward="false" selection-start-line="105" selection-start-column="62" selection-end-line="105" selection-end-column="62" />
           <folding>
-            <marker date="1513834627888" expanded="false" signature="5868:5884" ph="..." />
-            <marker date="1513834627888" expanded="false" signature="5937:5947" ph="..." />
-            <marker date="1513834627888" expanded="false" signature="6732:6778" ph="..." />
-            <marker date="1513834627888" expanded="false" signature="7260:7307" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="480" column="22" lean-forward="false" selection-start-line="480" selection-start-column="22" selection-end-line="480" selection-end-column="22" />
-          <folding>
-            <marker date="1513834627883" expanded="true" signature="244:364" ph="SELECT UserN... ${$db_table_prefix}" />
-            <marker date="1513834627883" expanded="true" signature="1133:1237" ph="SELECT UID, ${$db_table_prefix}" />
-            <marker date="1513834627883" expanded="true" signature="3397:3549" ph="INSERT INTO ${$db_table_prefix}user_info... " />
-            <marker date="1513834627883" expanded="true" signature="3975:4092" ph="SELECT UserN... ${$db_table_prefix}" />
-            <marker date="1513834627883" expanded="true" signature="4647:4854" ph="INSERT INTO ${$db_table_prefix}contact_us... " />
-            <marker date="1513834627883" expanded="true" signature="5148:5351" ph="SELECT p.PID... ${$db_table_prefix}" />
-            <marker date="1513834627883" expanded="true" signature="5988:6054" ph="SELECT BImgI... ${$db_table_prefix}" />
-            <marker date="1513834627883" expanded="true" signature="6467:6568" ph="SELECT PName... ${$db_table_prefix}" />
-            <marker date="1513834627883" expanded="true" signature="8604:8712" ph="SELECT PID, ${$db_table_prefix}" />
-            <marker date="1513834627883" expanded="true" signature="10082:10231" ph="INSERT INTO ${$db_table_prefix}user_cart... " />
-            <marker date="1513834627883" expanded="true" signature="10671:10730" ph="DELETE FROM ${$db_table_prefix}user_cart... " />
-            <marker date="1513834627883" expanded="true" signature="11027:11217" ph="INSERT INTO ${$db_table_prefix}billing_address_info... " />
+            <element signature="n#style#0;n#h4#0;n#a#0;n#div#0;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h6#0;n#a#0;n#div#0;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#a#0;n#div#1;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h6#0;n#a#0;n#div#1;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#a#0;n#div#2;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h6#0;n#a#0;n#div#2;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#a#0;n#div#3;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h6#0;n#a#0;n#div#3;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#a#0;n#div#4;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h6#0;n#a#0;n#div#4;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#a#0;n#div#5;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h6#0;n#a#0;n#div#5;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#a#0;n#div#6;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h6#0;n#a#0;n#div#6;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#a#0;n#div#7;n#div#1;n#div#0;n#section#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#1;n#blockquote#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#1;n#blockquote#0;n#div#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#1;n#blockquote#0;n#div#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
