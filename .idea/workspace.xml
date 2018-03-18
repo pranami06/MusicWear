@@ -309,7 +309,7 @@
       <workItem from="1513881120114" duration="2867000" />
       <workItem from="1518730574047" duration="583000" />
       <workItem from="1518731252932" duration="229000" />
-      <workItem from="1521406255175" duration="418000" />
+      <workItem from="1521406255175" duration="583000" />
     </task>
     <task id="LOCAL-00001" summary="Music Wear initial template">
       <created>1512602864973</created>
@@ -528,11 +528,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521406543799</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="new changes added">
+      <created>1521406687982</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1521406687982</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156800000" />
+    <option name="totallyTimeSpent" value="156965000" />
   </component>
   <component name="TodoView" selected-index="5">
     <todo-panel id="selected-file">
@@ -574,7 +581,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added Login and Register Pages&#10;Added Images related to Login and Register Pages&#10;Added CSS and javascript files related to Login and Register Pages" />
     <MESSAGE value="Added config, functions, logout and db-settings file.&#10;Added some changes in files related to login." />
     <MESSAGE value="Added functionality for CreateAccount and login page" />
     <MESSAGE value="Login Functionality comoleted" />
@@ -599,7 +605,8 @@
     <MESSAGE value="added png image files and removed some jpg files" />
     <MESSAGE value="changed image path" />
     <MESSAGE value="changed image path and moved content to center" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed image path and moved content to center" />
+    <MESSAGE value="new changes added" />
+    <option name="LAST_COMMIT_MESSAGE" value="new changes added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
