@@ -309,7 +309,7 @@
       <workItem from="1513881120114" duration="2867000" />
       <workItem from="1518730574047" duration="583000" />
       <workItem from="1518731252932" duration="229000" />
-      <workItem from="1521406255175" duration="583000" />
+      <workItem from="1521406255175" duration="674000" />
     </task>
     <task id="LOCAL-00001" summary="Music Wear initial template">
       <created>1512602864973</created>
@@ -535,11 +535,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521406687982</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="new changes added">
+      <created>1521406846565</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1521406846565</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156965000" />
+    <option name="totallyTimeSpent" value="157056000" />
   </component>
   <component name="TodoView" selected-index="5">
     <todo-panel id="selected-file">
